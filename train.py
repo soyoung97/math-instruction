@@ -7,11 +7,11 @@ import pytorch_lightning as pl
 import torch
 from pytorch_lightning import loggers as pl_loggers
 from torch.utils.data import DataLoader, Dataset
-from dataset import KoBARTSummaryDataset
-from transformers import BartForConditionalGeneration, PreTrainedTokenizerFast
+from dataset import AQUADataset, MathDataModule
+from transformers import T5Tokenizer, T5ForConditionalGeneration
 from transformers.optimization import AdamW, get_cosine_schedule_with_warmup
 
-parser = argparse.ArgumentParser(description='KoBART Summarization')
+parser = argparse.ArgumentParser(description='Math instruction')
 
 parser.add_argument('--checkpoint_path',
                     type=str,
@@ -28,79 +28,29 @@ class ArgsBase():
             parents=[parent_parser], add_help=False)
         parser.add_argument('--train_file',
                             type=str,
-                            default='data/train.tsv',
+                            default='AQuA/train.tok.json',
                             help='train file')
 
         parser.add_argument('--test_file',
                             type=str,
-                            default='data/test.tsv',
+                            default='AQUA/test.tok.json',
                             help='test file')
+
+        parser.add_argument('--val_file',
+                            type=str,
+                            default='AQUA/dev.tok.json',
+                            help='val file')
 
         parser.add_argument('--batch_size',
                             type=int,
-                            default=14,
+                            default=8,
                             help='')
+
         parser.add_argument('--max_len',
                             type=int,
-                            default=512,
+                            default=256,
                             help='max seq len')
         return parser
-
-class KobartSummaryModule(pl.LightningDataModule):
-    def __init__(self, train_file,
-                 test_file, tok,
-                 max_len=512,
-                 batch_size=8,
-                 num_workers=5):
-        super().__init__()
-        self.batch_size = batch_size
-        self.max_len = max_len
-        self.train_file_path = train_file
-        self.test_file_path = test_file
-        if tok is None:
-            self.tok = get_kobart_tokenizer() # TODO: update
-        else:
-            self.tok = tok
-        self.num_workers = num_workers
-
-    @staticmethod
-    def add_model_specific_args(parent_parser):
-        parser = argparse.ArgumentParser(
-            parents=[parent_parser], add_help=False)
-        parser.add_argument('--num_workers',
-                            type=int,
-                            default=5,
-                            help='num of worker for dataloader')
-        return parser
-
-    # OPTIONAL, called for every GPU/machine (assigning state is OK)
-    def setup(self, stage):
-        # split dataset
-        self.train = KoBARTSummaryDataset(self.train_file_path,
-                                 self.tok,
-                                 self.max_len)
-        self.test = KoBARTSummaryDataset(self.test_file_path,
-                                self.tok,
-                                self.max_len)
-
-    def train_dataloader(self):
-        train = DataLoader(self.train,
-                           batch_size=self.batch_size,
-                           num_workers=self.num_workers, shuffle=True)
-        return train
-
-    def val_dataloader(self):
-        val = DataLoader(self.test,
-                         batch_size=self.batch_size,
-                         num_workers=self.num_workers, shuffle=False)
-        return val
-
-    def test_dataloader(self):
-        test = DataLoader(self.test,
-                          batch_size=self.batch_size,
-                          num_workers=self.num_workers, shuffle=False)
-        return test
-
 
 class Base(pl.LightningModule):
     def __init__(self, hparams, **kwargs) -> None:
@@ -128,10 +78,10 @@ class Base(pl.LightningModule):
                             default=0.1,
                             help='warmup ratio')
 
-        parser.add_argument('--model_path',
-                            type=str,
-                            default=None,
-                            help='kobart model path')
+        #parser.add_argument('--max_epochs',
+        #                    type=int,
+        #                    default=100,
+        #                    help='maximum epochs')
         return parser
 
     def configure_optimizers(self):
@@ -162,22 +112,20 @@ class Base(pl.LightningModule):
         return [optimizer], [lr_scheduler]
 
 
-class KoBARTConditionalGeneration(Base):
+class T5ConditionalGeneration(Base):
     def __init__(self, hparams, **kwargs):
-        super(KoBARTConditionalGeneration, self).__init__(hparams, **kwargs)
-        # TODO : update
-        self.model = BartForConditionalGeneration.from_pretrained(get_pytorch_kobart_model())
+        super(T5ConditionalGeneration, self).__init__(hparams, **kwargs)
+        self.model = T5ForConditionalGeneration.from_pretrained("t5-base")
         self.model.train()
         self.bos_token = '<s>'
         self.eos_token = '</s>'
         self.pad_token_id = 0
-        self.tokenizer = get_kobart_tokenizer() # TODO : update
+        self.tokenizer = T5Tokenizer.from_pretrained("t5-base")
 
     def forward(self, inputs):
 
         attention_mask = inputs['input_ids'].ne(self.pad_token_id).float()
         decoder_attention_mask = inputs['decoder_input_ids'].ne(self.pad_token_id).float()
-        
         return self.model(input_ids=inputs['input_ids'],
                           attention_mask=attention_mask,
                           decoder_input_ids=inputs['decoder_input_ids'],
@@ -205,15 +153,18 @@ class KoBARTConditionalGeneration(Base):
 if __name__ == '__main__':
     parser = Base.add_model_specific_args(parser)
     parser = ArgsBase.add_model_specific_args(parser)
-    parser = KobartSummaryModule.add_model_specific_args(parser)
+    parser = MathDataModule.add_model_specific_args(parser)
     parser = pl.Trainer.add_argparse_args(parser)
     args = parser.parse_args()
+    args.default_root_dir = 'logs'
+    args.max_epochs = 100
     logging.info(args)
 
-    model = KoBARTConditionalGeneration(args)
+    model = T5ConditionalGeneration(args)
 
-    dm = KobartSummaryModule(args.train_file,
+    dm = MathDataModule(args.train_file,
                         args.test_file,
+                        args.val_file,
                         None,
                         batch_size=args.batch_size,
                         max_len=args.max_len,
@@ -225,7 +176,7 @@ if __name__ == '__main__':
                                                        verbose=True,
                                                        save_last=True,
                                                        mode='min',
-                                                       save_top_k=-1)
+                                                       save_top_k=1)
     tb_logger = pl_loggers.TensorBoardLogger(os.path.join(args.default_root_dir, 'tb_logs'))
     lr_logger = pl.callbacks.LearningRateMonitor()
     trainer = pl.Trainer.from_argparse_args(args, logger=tb_logger,
