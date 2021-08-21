@@ -48,7 +48,7 @@ class ArgsBase():
 
         parser.add_argument('--max_len',
                             type=int,
-                            default=256,
+                            default=512,
                             help='max seq len')
         return parser
 
@@ -78,10 +78,6 @@ class Base(pl.LightningModule):
                             default=0.1,
                             help='warmup ratio')
 
-        #parser.add_argument('--max_epochs',
-        #                    type=int,
-        #                    default=100,
-        #                    help='maximum epochs')
         return parser
 
     def configure_optimizers(self):
@@ -121,6 +117,7 @@ class T5ConditionalGeneration(Base):
         self.eos_token = '</s>'
         self.pad_token_id = 0
         self.tokenizer = T5Tokenizer.from_pretrained("t5-base")
+        self.int2ans = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E'}
 
     def forward(self, inputs):
 
@@ -141,13 +138,29 @@ class T5ConditionalGeneration(Base):
 
     def validation_step(self, batch, batch_idx):
         outs = self(batch)
+        results = []
         loss = outs['loss']
-        return (loss)
+        generated_outputs = self.model.generate(batch['input_ids'])
+        correct = 0
+        for i, gen in enumerate(generated_outputs):
+            out = self.tokenizer.decode(gen)
+            out = out.split('<extra_id_0>')
+            if len(out) != 1: # if 1, it means zero occurances of extra_id_0 : treat it as wrong
+                out = out[-1].replace('</s>', '').strip().upper()
+                answer = self.int2ans[batch['answer'][i].item()]
+                if answer == out:
+                    correct += 1
+                print(f"DEBUG: answer: {answer}, output: {out}")
+        return (loss, correct)
 
     def validation_epoch_end(self, outputs):
         losses = []
-        for loss in outputs:
+        total_correct = 0
+        for loss, correct in outputs:
             losses.append(loss)
+            total_correct += correct
+        print(f"Correct: {total_correct}, Total: {len(outputs)}")
+        self.log('accuracy', total_correct/len(outputs))
         self.log('val_loss', torch.stack(losses).mean(), prog_bar=True)
 
 if __name__ == '__main__':
@@ -170,7 +183,7 @@ if __name__ == '__main__':
                         max_len=args.max_len,
                         num_workers=args.num_workers)
     
-    checkpoint_callback = pl.callbacks.ModelCheckpoint(monitor='val_loss',
+    checkpoint_callback = pl.callbacks.ModelCheckpoint(monitor='accuracy',
                                                        dirpath=args.default_root_dir,
                                                        filename='model_chp/{epoch:02d}-{val_loss:.3f}',
                                                        verbose=True,

@@ -17,10 +17,12 @@ class AQUADataset(Dataset):
         super().__init__()
         self.tok = tok
         self.max_len = max_len
+        self.special_tok = '<extra_id_0>'
         self.docs = self.read_file(file)
         self.len = len(self.docs)
         self.pad_index = pad_index
         self.ignore_index = ignore_index
+        self.answer2int = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5}
 
     def read_file(self, file_path):
         data = []
@@ -31,17 +33,17 @@ class AQUADataset(Dataset):
         """ example:
 {'correct': 'B',
  'input': 'Each child has 8 crayons and 15 apples . If there are 7 children , '
-          'how many crayons are there in total ? <tab> A ) 22 <tab> B ) 56 '
-          '<tab> C ) 12 <tab> D ) 36 <tab> E ) 10',
+          'how many crayons are there in total ? {self.special_tok} A ) 22 {self.special_tok} B ) 56 '
+          '{self.special_tok} C ) 12 {self.special_tok} D ) 36 {self.special_tok} E ) 10',
  'options': ['A ) 22', 'B ) 56', 'C ) 12', 'D ) 36', 'E ) 10'],
  'question': 'Each child has 8 crayons and 15 apples . If there are 7 children '
              ', how many crayons are there in total ?',
  'rationale': '8 * 7 = 56 . Answer is B .',
- 'target': '8 * 7 = 56 . Answer is B . <tab> B'}
+ 'target': '8 * 7 = 56 . Answer is B . {self.special_tok} B'}
 """
         for d in data:
-            d['input'] = f"{d['question']} <tab> {' <tab> '.join(d['options'])}"
-            d['target'] = f"{d['rationale']} <tab> {d['correct']}"
+            d['input'] = f"{d['question']} {self.special_tok} {f' {self.special_tok} '.join(d['options'])}"
+            d['target'] = f"{d['rationale']} {self.special_tok} {d['correct']}"
         return data
 
     def add_padding_data(self, inputs):
@@ -79,8 +81,8 @@ class AQUADataset(Dataset):
 #                 torch.tensor(label_ids))
         return {'input_ids': np.array(input_ids, dtype=np.int_),
                 'decoder_input_ids': np.array(dec_input_ids, dtype=np.int_),
-                'labels': np.array(label_ids, dtype=np.int_)}
-    
+                'labels': np.array(label_ids, dtype=np.int_),
+                'answer': np.array(self.answer2int[instance['correct']], dtype=np.int_)}
     def __len__(self):
         return self.len
 
@@ -89,7 +91,7 @@ class AQUADataset(Dataset):
 class MathDataModule(pl.LightningDataModule):
     def __init__(self, train_file,
                  test_file, val_file, tok,
-                 max_len=256,
+                 max_len=512,
                  batch_size=8,
                  num_workers=5):
         super().__init__()
