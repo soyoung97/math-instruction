@@ -8,7 +8,7 @@ import torch
 from pytorch_lightning import loggers as pl_loggers
 from torch.utils.data import DataLoader, Dataset
 from dataset import AQUADataset, MathDataModule
-from transformers import T5Tokenizer, T5ForConditionalGeneration
+from transformers import T5Tokenizer, T5ForConditionalGeneration, set_seed
 from transformers.optimization import AdamW, get_cosine_schedule_with_warmup
 
 parser = argparse.ArgumentParser(description='Math instruction')
@@ -16,6 +16,8 @@ parser = argparse.ArgumentParser(description='Math instruction')
 parser.add_argument('--checkpoint_path',
                     type=str,
                     help='checkpoint path')
+
+parser.add_argument('--seed', type=int, help='Setting seed for reproducibility', default=0)
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -41,15 +43,12 @@ class ArgsBase():
                             default='AQUA/dev.tok.json',
                             help='val file')
 
-        parser.add_argument('--batch_size',
-                            type=int,
-                            default=8,
-                            help='')
-
         parser.add_argument('--max_len',
                             type=int,
                             default=512,
                             help='max seq len')
+        parser.add_argument('--mode',
+                            type=str, default='normal', help='model training mode: e.g. normal, explain, ...')
         return parser
 
 class Base(pl.LightningModule):
@@ -65,7 +64,7 @@ class Base(pl.LightningModule):
 
         parser.add_argument('--batch-size',
                             type=int,
-                            default=14,
+                            default=8,
                             help='batch size for training (default: 96)')
 
         parser.add_argument('--lr',
@@ -118,6 +117,7 @@ class T5ConditionalGeneration(Base):
         self.pad_token_id = 0
         self.tokenizer = T5Tokenizer.from_pretrained("t5-base")
         self.int2ans = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E'}
+        self.mode = hparams.mode
 
     def forward(self, inputs):
 
@@ -143,14 +143,23 @@ class T5ConditionalGeneration(Base):
         generated_outputs = self.model.generate(batch['input_ids'])
         correct = 0
         for i, gen in enumerate(generated_outputs):
-            out = self.tokenizer.decode(gen)
-            out = out.split('<extra_id_0>')
-            if len(out) != 1: # if 1, it means zero occurances of extra_id_0 : treat it as wrong
-                out = out[-1].replace('</s>', '').strip().upper()
+            if self.mode == 'explain':
+                out = self.tokenizer.decode(gen)
+                out = out.split('<extra_id_0>')
+                if len(out) != 1: # if 1, it means zero occurances of extra_id_0 : treat it as wrong
+                    out = out[-1].replace('</s>', '').strip().upper()
+                    answer = self.int2ans[batch['answer'][i].item()]
+                    if answer == out:
+                        correct += 1
+                    print(f"explain: answer: {answer}, output: {out}")
+            elif self.mode == 'normal':
+                out = self.tokenizer.decode(gen, skip_special_tokens=True).upper()
                 answer = self.int2ans[batch['answer'][i].item()]
                 if answer == out:
                     correct += 1
-                print(f"DEBUG: answer: {answer}, output: {out}")
+                print(f"NORMAL: answer: {answer}, output: {out}")
+            else:
+                raise Exception(f"Mode not implemented: {self.mode}")
         return (loss, correct)
 
     def validation_epoch_end(self, outputs):
@@ -160,8 +169,8 @@ class T5ConditionalGeneration(Base):
             losses.append(loss)
             total_correct += correct
         print(f"Correct: {total_correct}, Total: {len(outputs)}")
-        self.log('accuracy', total_correct/len(outputs))
-        self.log('val_loss', torch.stack(losses).mean(), prog_bar=True)
+        self.log('accuracy', total_correct/len(outputs), sync_dist=True)
+        self.log('val_loss', torch.stack(losses).mean(), prog_bar=True, sync_dist=True)
 
 if __name__ == '__main__':
     parser = Base.add_model_specific_args(parser)
@@ -171,6 +180,10 @@ if __name__ == '__main__':
     args = parser.parse_args()
     args.default_root_dir = 'logs'
     args.max_epochs = 100
+    args.gpus = -1
+    args.num_workers = 4
+    args.accelerator='dp'
+    set_seed(args.seed)
     logging.info(args)
 
     model = T5ConditionalGeneration(args)
@@ -179,6 +192,7 @@ if __name__ == '__main__':
                         args.test_file,
                         args.val_file,
                         None,
+                        args.mode,
                         batch_size=args.batch_size,
                         max_len=args.max_len,
                         num_workers=args.num_workers)

@@ -13,11 +13,12 @@ from transformers import T5Tokenizer, T5ForConditionalGeneration
 from pprint import pprint
 
 class AQUADataset(Dataset):
-    def __init__(self, file, tok, max_len, pad_index = 0, ignore_index=-100):
+    def __init__(self, file, tok, max_len, mode,  pad_index = 0, ignore_index=-100):
         super().__init__()
         self.tok = tok
         self.max_len = max_len
         self.special_tok = '<extra_id_0>'
+        self.mode = mode
         self.docs = self.read_file(file)
         self.len = len(self.docs)
         self.pad_index = pad_index
@@ -42,8 +43,14 @@ class AQUADataset(Dataset):
  'target': '8 * 7 = 56 . Answer is B . {self.special_tok} B'}
 """
         for d in data:
-            d['input'] = f"{d['question']} {self.special_tok} {f' {self.special_tok} '.join(d['options'])}"
-            d['target'] = f"{d['rationale']} {self.special_tok} {d['correct']}"
+            if self.mode == 'normal':
+                d['input'] = f"{d['question']} {self.special_tok} {f' {self.special_tok} '.join(d['options'])}"
+                d['target'] = f"{d['correct']}"
+            elif self.mode == 'explain':
+                d['input'] = f"{d['question']} {self.special_tok} {f' {self.special_tok} '.join(d['options'])}"
+                d['target'] = f"{d['rationale']} {self.special_tok} {d['correct']}"
+            else:
+                raise Exception(f"Mode not implemented: {self.mode}")
         return data
 
     def add_padding_data(self, inputs):
@@ -90,7 +97,7 @@ class AQUADataset(Dataset):
 
 class MathDataModule(pl.LightningDataModule):
     def __init__(self, train_file,
-                 test_file, val_file, tok,
+                 test_file, val_file, tok, mode,
                  max_len=512,
                  batch_size=8,
                  num_workers=5):
@@ -100,6 +107,7 @@ class MathDataModule(pl.LightningDataModule):
         self.train_file_path = train_file
         self.val_file_path = val_file
         self.test_file_path = test_file
+        self.mode = mode
         if tok is None:
             self.tok = T5Tokenizer.from_pretrained("t5-base")
         else:
@@ -112,7 +120,7 @@ class MathDataModule(pl.LightningDataModule):
             parents=[parent_parser], add_help=False)
         parser.add_argument('--num_workers',
                             type=int,
-                            default=5,
+                            default=4,
                             help='num of worker for dataloader')
         return parser
 
@@ -121,13 +129,13 @@ class MathDataModule(pl.LightningDataModule):
         # split dataset
         self.train = AQUADataset(self.train_file_path,
                                  self.tok,
-                                 self.max_len)
+                                 self.max_len, self.mode)
         self.test = AQUADataset(self.test_file_path,
                                 self.tok,
-                                self.max_len)
+                                self.max_len, self.mode)
         self.val = AQUADataset(self.val_file_path,
                                 self.tok,
-                                self.max_len)
+                                self.max_len, self.mode)
 
     def train_dataloader(self):
         train = DataLoader(self.train,
