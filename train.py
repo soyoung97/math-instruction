@@ -6,16 +6,20 @@ import pandas as pd
 import pytorch_lightning as pl
 import torch
 from pytorch_lightning import loggers as pl_loggers
+from pytorch_lightning.loggers import WandbLogger
 from torch.utils.data import DataLoader, Dataset
 from dataset import AQUADataset, MathDataModule
 from transformers import T5Tokenizer, T5ForConditionalGeneration, set_seed
 from transformers.optimization import AdamW, get_cosine_schedule_with_warmup
+from model import T5ConditionalGeneration
 
 parser = argparse.ArgumentParser(description='Math instruction')
 
 parser.add_argument('--checkpoint_path',
                     type=str,
                     help='checkpoint path')
+
+parser.add_argument('--log_dir', type=str, default='logs')
 
 parser.add_argument('--seed', type=int, help='Setting seed for reproducibility', default=0)
 
@@ -51,135 +55,14 @@ class ArgsBase():
                             type=str, default='normal', help='model training mode: e.g. normal, explain, ...')
         return parser
 
-class Base(pl.LightningModule):
-    def __init__(self, hparams, **kwargs) -> None:
-        super(Base, self).__init__()
-        self.save_hyperparameters(hparams)
-
-    @staticmethod
-    def add_model_specific_args(parent_parser):
-        # add model specific args
-        parser = argparse.ArgumentParser(
-            parents=[parent_parser], add_help=False)
-
-        parser.add_argument('--batch-size',
-                            type=int,
-                            default=8,
-                            help='batch size for training (default: 96)')
-
-        parser.add_argument('--lr',
-                            type=float,
-                            default=3e-5,
-                            help='The initial learning rate')
-
-        parser.add_argument('--warmup_ratio',
-                            type=float,
-                            default=0.1,
-                            help='warmup ratio')
-
-        return parser
-
-    def configure_optimizers(self):
-        # Prepare optimizer
-        param_optimizer = list(self.model.named_parameters())
-        no_decay = ['bias', 'LayerNorm.bias', 'LayerNorm.weight']
-        optimizer_grouped_parameters = [
-            {'params': [p for n, p in param_optimizer if not any(
-                nd in n for nd in no_decay)], 'weight_decay': 0.01},
-            {'params': [p for n, p in param_optimizer if any(
-                nd in n for nd in no_decay)], 'weight_decay': 0.0}
-        ]
-        optimizer = AdamW(optimizer_grouped_parameters,
-                          lr=self.hparams.lr, correct_bias=False)
-        num_workers = self.hparams.num_workers
-        data_len = len(self.train_dataloader().dataset)
-        logging.info(f'number of workers {num_workers}, data length {data_len}')
-        num_train_steps = int(data_len / (self.hparams.batch_size * num_workers) * self.hparams.max_epochs)
-        logging.info(f'num_train_steps : {num_train_steps}')
-        num_warmup_steps = int(num_train_steps * self.hparams.warmup_ratio)
-        logging.info(f'num_warmup_steps : {num_warmup_steps}')
-        scheduler = get_cosine_schedule_with_warmup(
-            optimizer,
-            num_warmup_steps=num_warmup_steps, num_training_steps=num_train_steps)
-        lr_scheduler = {'scheduler': scheduler, 
-                        'monitor': 'loss', 'interval': 'step',
-                        'frequency': 1}
-        return [optimizer], [lr_scheduler]
-
-
-class T5ConditionalGeneration(Base):
-    def __init__(self, hparams, **kwargs):
-        super(T5ConditionalGeneration, self).__init__(hparams, **kwargs)
-        self.model = T5ForConditionalGeneration.from_pretrained("t5-base")
-        self.model.train()
-        self.bos_token = '<s>'
-        self.eos_token = '</s>'
-        self.pad_token_id = 0
-        self.tokenizer = T5Tokenizer.from_pretrained("t5-base")
-        self.int2ans = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E'}
-        self.mode = hparams.mode
-
-    def forward(self, inputs):
-
-        attention_mask = inputs['input_ids'].ne(self.pad_token_id).float()
-        decoder_attention_mask = inputs['decoder_input_ids'].ne(self.pad_token_id).float()
-        return self.model(input_ids=inputs['input_ids'],
-                          attention_mask=attention_mask,
-                          decoder_input_ids=inputs['decoder_input_ids'],
-                          decoder_attention_mask=decoder_attention_mask,
-                          labels=inputs['labels'], return_dict=True)
-
-
-    def training_step(self, batch, batch_idx):
-        outs = self(batch)
-        loss = outs.loss
-        self.log('train_loss', loss, prog_bar=True)
-        return loss
-
-    def validation_step(self, batch, batch_idx):
-        outs = self(batch)
-        results = []
-        loss = outs['loss']
-        generated_outputs = self.model.generate(batch['input_ids'])
-        correct = 0
-        for i, gen in enumerate(generated_outputs):
-            if self.mode == 'explain':
-                out = self.tokenizer.decode(gen)
-                out = out.split('<extra_id_0>')
-                if len(out) != 1: # if 1, it means zero occurances of extra_id_0 : treat it as wrong
-                    out = out[-1].replace('</s>', '').strip().upper()
-                    answer = self.int2ans[batch['answer'][i].item()]
-                    if answer == out:
-                        correct += 1
-                    print(f"explain: answer: {answer}, output: {out}")
-            elif self.mode == 'normal':
-                out = self.tokenizer.decode(gen, skip_special_tokens=True).upper()
-                answer = self.int2ans[batch['answer'][i].item()]
-                if answer == out:
-                    correct += 1
-                print(f"NORMAL: answer: {answer}, output: {out}")
-            else:
-                raise Exception(f"Mode not implemented: {self.mode}")
-        return (loss, correct)
-
-    def validation_epoch_end(self, outputs):
-        losses = []
-        total_correct = 0
-        for loss, correct in outputs:
-            losses.append(loss)
-            total_correct += correct
-        print(f"Correct: {total_correct}, Total: {len(outputs)}")
-        self.log('accuracy', total_correct/len(outputs), sync_dist=True)
-        self.log('val_loss', torch.stack(losses).mean(), prog_bar=True, sync_dist=True)
-
 if __name__ == '__main__':
     parser = Base.add_model_specific_args(parser)
     parser = ArgsBase.add_model_specific_args(parser)
     parser = MathDataModule.add_model_specific_args(parser)
     parser = pl.Trainer.add_argparse_args(parser)
     args = parser.parse_args()
-    args.default_root_dir = 'logs'
-    args.max_epochs = 100
+    args.default_root_dir = args.log_dir
+    args.max_epochs = 50
     args.gpus = -1
     args.num_workers = 4
     args.accelerator='dp'
@@ -196,16 +79,17 @@ if __name__ == '__main__':
                         batch_size=args.batch_size,
                         max_len=args.max_len,
                         num_workers=args.num_workers)
-    
-    checkpoint_callback = pl.callbacks.ModelCheckpoint(monitor='accuracy',
+
+    checkpoint_callback = pl.callbacks.ModelCheckpoint(monitor='val_loss',
                                                        dirpath=args.default_root_dir,
                                                        filename='model_chp/{epoch:02d}-{val_loss:.3f}',
                                                        verbose=True,
                                                        save_last=True,
                                                        mode='min',
                                                        save_top_k=1)
-    tb_logger = pl_loggers.TensorBoardLogger(os.path.join(args.default_root_dir, 'tb_logs'))
+    #tb_logger = pl_loggers.TensorBoardLogger(os.path.join(args.default_root_dir, 'tb_logs'))
     lr_logger = pl.callbacks.LearningRateMonitor()
-    trainer = pl.Trainer.from_argparse_args(args, logger=tb_logger,
+    wandb_logger = WandbLogger()
+    trainer = pl.Trainer.from_argparse_args(args, logger=wandb_logger,
                                             callbacks=[checkpoint_callback, lr_logger])
     trainer.fit(model, dm)
