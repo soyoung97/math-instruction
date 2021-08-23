@@ -12,6 +12,7 @@ from dataset import AQUADataset, MathDataModule
 from transformers import T5Tokenizer, T5ForConditionalGeneration, set_seed
 from transformers.optimization import AdamW, get_cosine_schedule_with_warmup
 from model import T5ConditionalGeneration
+from transformers import set_seed
 import time
 
 def parse_args():
@@ -22,6 +23,7 @@ def parse_args():
     parser.add_argument('--batch_size', type=int, default=32)
     parser.add_argument('--path', type=str, help='Model checkpoint path', default='logs/normal-prev/last.ckpt')
     parser.add_argument('--output', help='output file path', type=str, default='outputs/normal-prev-last.txt')
+    parser.add_argument('--seed', help='setting seed for decoding and generation', type=int, default=0)
     args = parser.parse_args()
     return args
 
@@ -38,6 +40,7 @@ def main():
     dm = MathDataModule('AQuA/train.tok.json', 'AQuA/test.tok.json', 'AQuA/dev.tok.json', None, args.mode,
             batch_size=args.batch_size, max_len=512, num_workers=4)
     dm.setup(None)
+    set_seed(args.seed)
     #train_cnt, train_tot = dm.train.get_overfull_count()
     #val_cnt, val_tot = dm.val.get_overfull_count()
     #test_cnt, test_tot = dm.test.get_overfull_count()
@@ -55,12 +58,16 @@ def main():
     total = 0
     correct = 0
     partial = 0
+    ansans = []
     for batch in tqdm(dm.test_dataloader()):
         generated_outputs = T5model.model.generate(batch['input_ids'].cuda())
         for i, gen in enumerate(generated_outputs):
             if args.mode == 'explain':
                 out = dm.tok.decode(gen)
                 res.append(out)
+                labels = torch.where(batch['labels'][i] == -100, 0, batch['labels'][i])
+                label_ans = dm.tok.decode(labels)
+                ansans.append(label_ans)
                 out = out.split('<extra_id_0>')
                 if len(out) != 1: # if 1, it means zero occurances of extra_id_0 : treat it as wrong
                     out = out[-1].replace('</s>', '').replace('<pad>', '').strip().upper()
@@ -95,6 +102,8 @@ def main():
     res[0] = res[0] + ", " + acc_string
     with open(args.output, 'w') as f:
         f.write('\n'.join(res).strip())
+    with open('outputs/answer-explain-test.txt', 'w') as f:
+        f.write('\n'.join(ansans).strip())
     print(f"Writing to {args.output} done!")
     print(acc_string)
 if __name__ == '__main__':

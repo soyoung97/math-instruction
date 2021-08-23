@@ -1,255 +1,255 @@
 Output generated from: logs/explain/last.ckpt, accuracy: 5/254 (1.968503937007874 %), partial 5/254 (1.968503937007874 %)
-<pad> D. A. A. A. D. A. A
-<pad> : x - x - - - - -
-<pad> X = ( 9 + 12 ) / 2 = 36 Answer : A<extra_id_0>
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> CP = 360 CP = 20 / 100 * ( 20 / 100 )
-<pad> ( x - 20 ) = x - 20 x - 20
-<pad> Lotto = n ( n ) ( n ) ( n
+<pad> Angle of elevation change = angle of the car <unk> <unk> <unk> <unk> <unk>
 <pad> - - - - - - - - -
-<pad>.........
+<pad> X = 9 + 12 = 0. Hence, X = 9
 <pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> ( A ) : ( B ) : ( C ) : (
-<pad> : x / 100 - x = 4,000 x = 4,000
+<pad> ( A ) / ( B ) = ( 360 - 20 )
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> <unk> 2 <unk> 2 <unk> 2 <unk> 2 <unk> 2 <unk> 2
+<pad> “ 100 ”, “ 75 ” ” = > 1 / 2
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> ANSWER : B<extra_id_0> B</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> 420 / ( 420 / 110 ) = 240 Answer : C
+<pad> : x % of x = x % of x %
 <pad> Machine A puts out a yo - yo every 6 minutes.
-<pad> - 45 - - - - - - - -
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> P ( A / B ) = 0.2. Answer : B<extra_id_0> B
-<pad> i. e., x - x -
-<pad>.........
-<pad> z = z - 2 x / z = z -
-<pad> [ 5 +? <unk> 19 - 15 - 7 ] / [
-<pad> x = 100 x x = 3,000 x = 16. Answer
-<pad> <unk> Jacob <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> / 100 - - - - - - - -
-<pad> “ ” ” = 8890. Hence, the minimum number of
-<pad> Bill's speed is 15 / 18 = 15 / 18 mph
-<pad> B. $ 20.00 = $ 63.00. Then, the price
-<pad> <unk> 6 <unk> <unk> 4 <unk> = 500 <unk> 6 <unk> = 500
-<pad> x, y, x, y, x
-<pad> x / 6 = x / 4 x = 144 km ANS
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> l / t l = 20 / 4 inches. l =
-<pad> <extra_id_23>. Then, the area of the sheet = x * 48 *
-<pad> I'm not sure if you can travel from M to Q in one way
-<pad> diameter of the sphere = x / 8 = x / 4 x
-<pad>.........
+<pad> - 45 = - 30. ANSWER : A<extra_id_0> A</s>
+<pad> ( B ).<extra_id_0> B</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> P ( A / B ) = 0.2. P ( A / B
+<pad> : x - x - x - x -
+<pad> Average number of microwave ovens sold in the entire 22 months period = ( 42 - 20
+<pad> z = z - 2 x - 2 x = z
+<pad> “ <unk> 5 +? <unk> 19 - 15 - 7 ”
+<pad> CP = 100 CP = 3,000 CP = 3,000 / 100 -
+<pad> x = 7 x + 9 x = 35 x = 18 ANSW
 <pad> - - - - - - - - -
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> <unk> 500 / <unk> 5 <unk> 5 <unk> 100 = > 50000 Answer
-<pad> ( <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> B )<extra_id_0> B</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
-<pad>, A = 1 / 8, B = 1 / 3, A
-<pad> 96 = 120 - - - - - - -
+<pad> x / 16 = x / 16 = x / 10 =
 <pad> - - - - - - - - -
-<pad>.........
-<pad> ( 78000 - x ) = 81900 Answer A<extra_id_0> A</s> <pad>
-<pad> : x / 12 + x / 13 = x / 50
-<pad> - - - - - - - - -
-<pad> 360 = Rs. 31.50. Interest rate = ( 360 / 12
-<pad> - - - - - - - - -
-<pad> : ( 25 x ) / 50 x / 1 = 700
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> 98 boxes can hold 29400 toys in one round. The number of boxes in one
-<pad> ( C ). ( D ). ( E ). (
-<pad> : x - 6 / 3 x - 12 / 8
-<pad> - - - - - - - - -
-<pad> “ ” = 5 x 1 x 1 x 1 x 2 x
-<pad> / 100 - - - - - - - -
-<pad>. 30 / 30 = 30 / 30 = 30 / 30 = > 30
-<pad> <unk> 5 <unk> 2 <unk> 3 <unk> 3 = 91. Answer
-<pad> / 100 * 8 = 850. ANSWER : A<extra_id_0> A
-<pad> “ T ” = 50, R = 50, Q = 50, Q
-<pad> - - - - - - - - -
-<pad>, batting average = 51, batting average = 54, batting average
-<pad>.........
-<pad> The length of the piece is : <unk> <unk> 4 <unk> <unk> <unk>
-<pad> ( x / x ) = 8.5 x / x =
-<pad> “ 20 large cakes & 700 small cakes are needed. The total number of assistants
-<pad> - - - - - - - - -
-<pad> <extra_id_21> E ) 25 / 3 = 25 / 3 = x / 3
-<pad> “ 100 ” - - - - - - -
-<pad> ( A ). ( B ). ( C ). (
-<pad> A ) 22 cm<extra_id_0> A</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
-<pad> - - - - - - - - -
-<pad> “ x ” = x / 2 = x / 2 –
-<pad> in the above equation, the speed of the ship is 10 x. The speed
-<pad>.........
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> - - - - - - - - -
-<pad>.........
-<pad> Arun gives $ 30 to Sajal, so Sajal has twice the money
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> : 11 x 7700 x 2 = 350 x 2 = 350 x
-<pad>.........
-<pad> x - 30 = 5 x - 3 = 30 x = 30
-<pad> M - N + 396 c = 990 - - > 300
-<pad> “ ” ” ” ” ” ” ” ” ”
-<pad> Raj's age 5 years back = ( 1 / 3 ) ( 5
-<pad> graze the whole field in x days. The cow grazes 10
-<pad> “ 27.50 ” = Rs. 125.75. Profit =
-<pad>.........
-<pad> - - - - - - - - -
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad>.........
-<pad> 210 / 4 = 45. Answer : C.<extra_id_0> C</s> <pad>
-<pad> 96 - 4 = 24. Answer : D<extra_id_0> D</s> <pad> <pad> <pad>
-<pad> : length of the wire = length of the square / breadth of the wire
-<pad> x = 8600 x = 8600 x = 8600 / 5 =
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> - - - - - - - - -
-<pad> ( 3 / 4 ) = 120 / 3 = > x = 90
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> D / M - 3 = 3 D / M - 3 = 3 D
-<pad> ( x - 20 ) / 100 = 1200 x = 1200
-<pad> ( A ) = ( 40 - x ) / 2 = ( 72
-<pad> Amount he got = ( 75 / 2 ) * ( 75 / 2
+<pad> C ) $ 63.00......
 <pad> i. e......
-<pad> x / y = x / y 2 x /
+<pad> x - y = 0 x - y = 0
 <pad>.........
-<pad> Points A, B, C, D are in this order. Minor
-<pad> % of employees take a winter vacation = 75 %...
-<pad> 640 / 10 = 80 ANSWER : E<extra_id_0> E</s> <pad> <pad>
-<pad> <unk> 20 <unk> 30 <unk> 30 <unk> 30 = 70 Answer : A<extra_id_0>
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> ( A ) <unk> x <unk> 54 <unk> n ( B )
-<pad> i. e., i. e.
-<pad> The answer is D.<extra_id_0> D</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> “ ” = <unk> 4 / 2 <unk> <unk> <unk> <unk>
-<pad> – 8 – 6 – 8 – – – – –
-<pad> x / 64 = x / 40 x = 64 x /
-<pad> - - - - - - - - -
-<pad> Kevin's speed = 70 / 2 mph = 90 / 2
-<pad> 50 % of 30 = ( 30 - 1 / 100 ) x 50
-<pad> - - - - - - - - -
+<pad> A ) B ) C ) D ) 89 ANSWER
+<pad> Retail price = 60 % - - - - - -
 <pad>.........
-<pad> ( X ) : ( Y ) = 40 : ( X
-<pad> The number of senators that can be considered as Hoopsmot's is 1
+<pad>, x - - - - - - -
+<pad> A )<extra_id_0> A</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
 <pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> 211 - 211 = 86 %. Answer : D<extra_id_0> D
-<pad> - - - - - - - - -
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> - - - - - - - - -
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad>.........
-<pad> C ) 2797 Answer : C<extra_id_0> C</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
-<pad> <extra_id_9> x - 20 + x - 25 x - 3.40
-<pad> “ ” = 555 m. Answer : D<extra_id_0> D</s> <pad> <pad>
-<pad> ( 320 + 415 ) km / hr = 45 km /
-<pad> - - - - - - - - -
-<pad> 600 - - - - - - - - -
-<pad> D. 13.5 metre ANSWER : D<extra_id_0> D</s> <pad> <pad>
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> A - B = 0.6 - - - - - -
-<pad> <unk> = > <unk> 2 : <unk> 2 = > <unk> 2 :
-<pad> - - - - - - - - -
-<pad> - - - - - - - - -
-<pad> D ) 8<extra_id_0> D</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
-<pad> Sh. P. of 90 kg oranges = Rs. 450.
-<pad> - - - - - - - - -
-<pad> J : Jennie : 10 : 20 = 1 : 1 : 1
-<pad> British ) 420 - - - - - - -
-<pad> - - - - - - - - -
-<pad> ( A ). ( B ). ( C ). (
-<pad> : : : : : : : : :
-<pad> Sum of k consecutive integers = 51 k - 50 = - k
-<pad> <unk> 10 <unk> 2 <unk> 2 <unk> 2 <unk> 2 = 96
-<pad> x <unk> 2 + mx + 22 = 0 = 0 -
-<pad> mp / mla = 10! / 3 ways. Answer
+<pad> : A : A : A = 3 : 5 : 3 :
 <pad> : <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> B<extra_id_0> B</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
-<pad> sand / clay = 30 / 100 sand / clay = 70
+<pad> B. 2520 Answer : B<extra_id_0> B</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
 <pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> B ) 7.<extra_id_0> B</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
-<pad> <unk> Sharon's work = 5 <unk> ( 4 <unk> ( 4
-<pad> | x <unk> 0, y > 0 | y <unk>
-<pad> x / 2 = 100 pages. x / 2 = 100 /
-<pad> “ ” ” ” ” ” ” ” ” ”
+<pad> ( A ) / ( B ) = 200 / 400 / 600 =
+<pad>.........
+<pad> / t = x / 2 + x / t /
+<pad> 96 / 120 = 20 %. Answer : Option C<extra_id_0> C</s>
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> Number of people who are present in the city = 78000 + 5 % = 81
+<pad>.........
+<pad> 6000 - - - - - - - -
+<pad> I / 12 = 360 / ( 1 + 12 / 12 ) = Rs
+<pad> B ) 42.86 % Answer : B<extra_id_0> B</s> <pad> <pad> <pad> <pad>
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> / 100 - - - - - - - -
+<pad> ( 98 ) / ( 5 ) = ( 5 ) / (
+<pad> 2 - 1 st octane = 10 - 1 =
+<pad> A ) x = x. x. x = x
+<pad>.........
+<pad>.........
+<pad> B ) 2 %.<extra_id_0> B</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> x / 2 = 30 / 2 = > x = 26 days Answer
+<pad> ( 5 ) ( 2 ) ( 5 ) ( 2 ) ( 3
+<pad> 8 % of total students are interested in Football. 4 / 5 of total students
+<pad> C ) 27 Answer : B<extra_id_0> B</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> Calculate distance = $ 8.50 - $ 8.50 = $ 8.50 - $
+<pad> ANSWER : A<extra_id_0> A</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> Amy needs a total of 10 different letters.....
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> i. e., i. e.
+<pad> ANSWER : D<extra_id_0> D</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> - - - - - - - - -
+<pad> B ) 20 %<extra_id_0> B</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> A ) 126. B ) 126. C ) 88
+<pad> Area = ( l + w ) / ( l + w
+<pad> : x. x + y = x + y =
+<pad> A ) 13 x / 2 - 6 Answer : B<extra_id_0> B</s>
+<pad>.........
+<pad> <unk> total number of deer caught in 2001 = 300 + <unk> tagged <unk>
+<pad> ( ) <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> ( A )<extra_id_0> A</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> x / 100 = 3,000 x = 3,000 x = 30 feet
+<pad> ( x + b ) = 7700 - 7700 = x +
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> - - - - - - - - -
+<pad> M = abc - 396 c = 990 - 396 c
+<pad> 501 - - - - - - - -
+<pad> Raj is now 17 years old......
+<pad> - - - - - - - - -
+<pad> ( 27.50 - - - - - - -
+<pad> : <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> ( 540 - 620 ) / ( 500 - 620 )
+<pad> Ball A's first rotation = 2 ( 1 / 26 ) -
+<pad> - - - - - - - - -
+<pad> ( A ). ( A ). ( A ). (
+<pad> “ 96 ” = 240. The number of people who attended the picnic was
+<pad> lb = 27 bcm lb = 17 bc l
+<pad> ANSWER : D<extra_id_0> D</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> x - y = x - y = x -
+<pad> Red : Green = 3 : 4.....
+<pad>.........
+<pad>.........
+<pad> P - P - ( 100 / 100 ) = Rs. 1200
+<pad> <extra_id_9> A ’ leaves Mumbai Central at 11 am. Train ‘ B ’ leaves Luck
+<pad> ANSWER : A.<extra_id_0> A</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> - - - - - - - - -
+<pad> x men working x hours per day can do x units of a work in
+<pad>, the number of different quadrilaterals = 4! / 2
+<pad> - - - - - - - - -
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> - - - - - - - - -
+<pad> ( 20 / 100 ) * ( 20 / 100 ) = 70.
+<pad> x / y = x / y = 300 / 30
+<pad> n = ( n 2 + 2 <unk> n ( n + 4
+<pad> - - - - - - - - -
+<pad> ANSWER : A<extra_id_0> A</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> - - - - - - - - -
+<pad> - - - - - - - - -
+<pad> x / y = 8 x / 2 = 96 ANSW
+<pad> : x / 4 / 3 = 64 / 3 = 200.
+<pad> : 12 x / hr = 12 x / hr
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> <unk> <unk> <unk> 30 <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> A ) Rate in still water = 4 kmph Rate in still water = 2
+<pad> - - - - - - - - -
+<pad> X : Y = 6 : 9 and Y : 7 :
+<pad> Total number of senators = 1 / 2 * 1 / 2 * 1 /
+<pad> - - - - - - - - -
+<pad> 211 - 182 = 86 % Answer : D<extra_id_0> D</s> <pad>
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> <unk> ( 272 - 32 ) ( 124 + 176 )
+<pad> : <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> : x / 140 x / ( x / 3 )
+<pad> - - - - - - - - -
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> : x + y = x - x - y
+<pad>.........
+<pad> <unk> 320 <unk> 8 <unk> 415 <unk> 5 <unk> 5 =
+<pad> Winson's total time = 1 / 10 + 5 / 5 =
+<pad> A ) 600 = 320. B ) 240 = 320.
+<pad> builder : 17.5 x x = 28.75 x 2 x
+<pad>.........
+<pad>.........
+<pad> <unk> / <unk> = 2 : <unk>...
+<pad> ( 8 x 13 ) / ( 8 x 10 ) = 5
+<pad> ANSWER : D<extra_id_0> D</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> <unk> 2 <unk> 4 = 2 Answer is A<extra_id_0> A</s> <pad> <pad> <pad> <pad> <pad>
 <pad>.........
 <pad> ANSWER : A<extra_id_0> A</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> 1 mile = 1 / 10 + 1 / 20 = 1 / 2 = 1
+<pad> : M = 504 M / M = 800 M = 420 M =
+<pad> ( 8 ) / ( 12 ) = 12 / 8 = 12 /
+<pad> 4 / 10 = 480 ANSWER : B<extra_id_0> B</s> <pad> <pad>
+<pad> <unk> 2 <unk> <unk> 5 <unk> <unk> <unk> <unk> <unk>
+<pad> k = 51 - - - - - - -
+<pad> ( D ) = ( 10 x 10 ) / ( 10 x 10
+<pad> x <unk> 2 + mx + 22 = 0, then m
+<pad> : A : A : A : A : A : M
 <pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
 <pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> x + y = 54 x + 78 x = 144.
+<pad> : sand : clay : clay = 10 / 100.
+<pad> spending = 70 % increase = ( 70 / 100 ) * 100 = 58
+<pad> B ) 10.<extra_id_0> B</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> “ Sharon ’ s hourly rate = “ k ”, “ Karen
+<pad> - x <unk> 3 <unk> y <unk> 2..
+<pad> Printer A and Printer B can print 1 <unk> 2 pages per second. 100 /
+<pad> A's speed = 9 * 1 / 2 = 6 * 1 /
+<pad> “ ” = “ ” / 100 = “ ” / 100 = “
 <pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> ( x / 15 ) = 42.00 x = 0.3 x =
+<pad> ANSWER : A<extra_id_0> A</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> X - Y = X - Y = 54 kmph
+<pad> Average cost per year of the new tires = $ 180 Cost of repairing the current tires =
+<pad> ( 20 ) / ( 20 ) = 7.5 ANSWER :
 <pad> - - - - - - - - -
-<pad> C. P. of $ 5000 Bond = $ 5000 - $
-<pad> M A D R A E - - - - - -
 <pad>.........
-<pad> ( 340 ) / 10 = 3400 Answer A<extra_id_0> A</s> <pad> <pad> <pad>
-<pad> 34 % of the company's sales revenue came from the sale of novels
-<pad> 0.05 % of 8 flowers = 8 * 8 = 8000 ANSWER
+<pad> “ Sachin ” = 2 x 10 years = 2 x 10 = 2
+<pad> Total area of the plot = 340 * 10 = 1700 square metre = 1700
+<pad> 34 % of ACE's revenue came from the sale of novels.
+<pad> - - - - - - - - -
 <pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
 <pad> a 2 - b 2 / ( a + b ) 2
-<pad> “ 36 ” = ( 86 ) / 36 = 51 Answer : C
-<pad> case 1 : 1 : 1 : 1 : 1 : 1 :
-<pad> : A : B = ( 1 / 40 + 1 / 45 )
-<pad> ANSWER : D<extra_id_0> D</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
-<pad> B )<extra_id_0> B</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> - - - - - - - - -
+<pad> I think I know that I have to find the answer. I think it is a
+<pad> A's 40 min's work = 40 / 45 = 20
 <pad>.........
-<pad> B ) 7.5 corn.<extra_id_0> B</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> ( x + y ) / ( 7200 ) = 7200
-<pad> x = 18.......
-<pad> A ) L ( x, y ) = R ( 2 x
-<pad> I'm not sure what happens. I'm not sure what
-<pad> ( 14 - 10 ) = 21. Answer : A.<extra_id_0> A
-<pad> : C.<extra_id_0> C</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
-<pad> a, 0, b, y, a
-<pad> ( A ) : ( B ) : ( C ) Speed = 60
-<pad>.........
-<pad> 5000 / ( 72 x 5000 ) = Rs. 5000
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> - - - - - - - - -
-<pad> <unk> 1400 / 100 = 450 gms. Answer A<extra_id_0>
-<pad> A ) w / 25 gallons / x seconds = w
-<pad>.........
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> x 2 - 5 x + k = 0 = > x =
-<pad> 900 + 5 <unk> 12 = 900 <unk> 12 = 900 <unk> 12
-<pad> ( 10 / 15 ) = 10 hours. Answer : B<extra_id_0> B</s>
-<pad> <extra_id_23> D. M. S. = 17 hrs. If he
-<pad> A : A : B : C : D : E = 1
-<pad>.........
-<pad> x........
-<pad> 40 % of orange juice = 60 % of water. 40 % of orange
-<pad> Units digit of 9 <unk> 3 - 7 = 9 <unk> 3 -
-<pad> B ) 2 / 5 = 3 / 5 Answer : C<extra_id_0> C</s>
-<pad> - - - - - - - - -
-<pad> A ) 66 % B ) 68 % C ) 72
-<pad> Average wage during first 7 days = ( 87 + 92 ) / 15 =
-<pad> B ) 32 <unk> 3 <unk> 5 <unk> 3 <unk> 5 <unk> 3
-<pad> Ajay's present age = ( Ajay's present
-<pad> : Then, the time taken by Anna to move the 4 books in every possible
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> ( ) ( x ) = 9 x - 37 = x
-<pad> - - - - - - - - -
-<pad> - - - - - - - - -
-<pad> ( n - 1 ) / ( n - 1 ) =
-<pad>. Q is the square of a prime number. II. Q is the
-<pad> x - y = 24 x - y = 3 x
-<pad> - - - - - - - - -
-<pad> “ 7 ” / 4 = 108. Answer : A<extra_id_0> A</s>
-<pad> Jill can finish 1 / 12 of the work in 8 hours. The rate of
-<pad> 5000 - - - - - - - -
-<pad> <extra_id_21> D ) s. 4950.<extra_id_0> D</s> <pad> <pad> <pad> <pad>
-<pad> AB / 27 = 100 AB / 27 = 270 Answer : C
-<pad> There are 11 candy bars in the total cost of 4 candy bars. The total cost of
-<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
-<pad> x = 2 / 5 th of the children in the class are girls.
-<pad> - - - - - - - - -
-<pad> C. P. = $ 54,080. Then, (
-<pad> - - - - - - - - -
-<pad>.........
-<pad> m = 0 y x = y x = m %
-<pad> I ) 48 ways<extra_id_0> I</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
-<pad> A ) 59.0 % Answer : D<extra_id_0> D</s> <pad> <pad> <pad>
-<pad> 240 - - - - - - - -
+<pad> x / 30 x / 100 = 20 000 / 100 = 20
 <pad> <extra_id_23>.........
-<pad>.........
 <pad> - - - - - - - - -
-<pad> Number of children = 4169516 - 4265526 = 1095961
-<pad> “ ” x = x / 20 x = x / 6
-<pad> : P : Q : Half : 5 : 1 : 1
-<pad> Business : 100 % Profit = ( 100 - x ) / 100
+<pad> “ ” ” ” ” ” ” ” ” 6 soda
+<pad> ( 7200 / 100 ) * ( 10 / 100 ) * ( 25
+<pad> <unk> ten's digit <unk> ten's
+<pad> L ( x, y ) = [ x ] + [
+<pad> - - - - - - - - -
+<pad> - - - - - - - - -
+<pad> <unk> = <unk> <unk> <unk> = <unk> <unk> <unk> <unk>
+<pad> a, 0, b, y = a,
+<pad> x / 60 x = 10 x = 80 kmph Answer :
+<pad> ANSWER : C<extra_id_0> C</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> : 5000 x / 2 = 5000 x = 72 x =
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad>.........
+<pad> : 60 % of 30 % of 1400 grams = ( 30 * 1400
+<pad> Solution : Let xy gallons pass through the drain in 1 minute.
+<pad> x - 15 - - - - - - -
+<pad> x = 40 / 3 x = 210. Answer : D<extra_id_0>
+<pad> x 2 - 5 x + k = 0 - -
+<pad> 900 + 5 <unk> 12 = 900 <unk> 900 = 420 ANS
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> Mr. Sam takes 17 hours to go by train to a certain city and return by
+<pad> ( 1 / 3 ) * 100 = 1 / 3 * 100 = 1
+<pad> : 60 % of the people who took the survey were women. : 75
+<pad> <unk> 10 <unk> <unk> 10 <unk> <unk> <unk> 10 <unk> <unk>
+<pad> I.........
+<pad> 9 <unk> 3 - 7 = 3.....
+<pad> The probability that he selected the winning horse is 5 / 5 = 1 / 5
+<pad> even digit number = 875 / 2272 = 875 / 2 =
+<pad> - - - - - - - - -
+<pad> <unk> 87 / 7 = $ 92. <unk> 8 <unk>
+<pad> <unk> 3 <unk> 5 <unk> 9 <unk> 3 <unk> 3 <unk> 5
+<pad> Ajay's present age = 6 yrs, and Den
+<pad> “ ” = ” ” ” ” ” ” ”
+<pad> ( B ) / 100 ) = 30 % Answer : D<extra_id_0> D
+<pad> ANSWER : D.<extra_id_0> D</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> - - - - - - - - -
+<pad> : x - 1.8 = x - 1.8 x =
+<pad> Number of ways to select two balls from the box such that the ball with number 3 is not
+<pad> ( A ) : Q = a prime number. ( B )
+<pad> x = 6 x - 24 y = 3 x x = 6
+<pad> - - - - - - - - -
+<pad> <unk> l = 7 <unk> 4 <unk> l = 116. Answer
+<pad> ANSWER : D<extra_id_0> D</s> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad> <pad>
+<pad> 5000 - - - - - - - -
+<pad> A ) 5050. Answer : A ) 5050.<extra_id_0> A
+<pad> D ) 27 / AB = 27 / AB = 270 /
+<pad> ( A ) 8. Answer : A<extra_id_0> A</s> <pad> <pad> <pad> <pad> <pad>
+<pad> : : : 4 men : 4 women : : :
+<pad> 2 / 5 th of the children are girls....
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad> Lot size = 54,080 - - > 1 / 2 * 8
+<pad> age of Joe's father = 2 x. Age of Joe '
+<pad> 1 / 3 * 4 / 2 = 21 / 3 = 21 / 3
+<pad> If m > 0, y > 0, and x is
+<pad> x = 6 x = 48. ANSWER : C<extra_id_0> C
+<pad> Probability of a total of 4 - - - - -
+<pad> Area of the rectangular yard = 240 / 3 * 10 = 240 / 3
+<pad> John would make the 3 - letter codes with diffenrent 5 vowels and 20 cons
+<pad> <unk> 3 <unk> 3 = 37 <unk> 3 = 37 <unk> 3 = 37
+<pad> / 8 <unk> 6 <unk> 2.5 <unk> = 12000 litres Answer
+<pad> ( 5265526 ) = 4169516. The number of children is
+<pad> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+<pad>.........
+<pad> ( 500 ) = ( 500 * 1.25 ) / 100 * 100 =
