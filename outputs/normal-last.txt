@@ -1,255 +1,255 @@
-Output generated from: logs/normal/last.ckpt, accuracy: 0/254 (0.0 %), partial 61/254 (24.015748031496063 %)
 A )
-A ) $ 67.40
-A ) 0 C
-C ) 0.47.
-C ) 320.
-A ) 400
-A ) 74453; B
-C ) 15
-A ) 82,,, C ) 82
+B ) $ 67.20
+A ) 17 )
+A ) 0.26
+A ) 270,
+A ) 45022 C ) 400222
+A ) 64556 A
+A ) 10 hours;;;;;;.
+A ) 89 ) 89 )
 A ) 20
-A ) 240
-A ) 4,600
-A ) 36 minutes.
-A ) - 15 B ) - 15
-B ) 0!
-A ) 0.8, B ) 0.8,
-A ).....
-A ) 21.
-A ) ( zy – x ) / ( z -
-A ) 6.5
-A ) 20
-A ) 14
-A ) 42 %
-A ) 8890.
-A ) 2.85 miles....
-A ) $ 59.00;
-A ) 700,, C ) 600,
-D
-A ) 127 km.
-B )
-C ) 40 %
-A ) 1140.
-A ) 1520.....
-A ) 0 ) 0 0 0
-A ) 13.3560 C ) 19.0819
-A ) 3 km,
-A ) Rs. 780.50,
-B ) None
-A ) $ 20000
-A ) 050 C ) 050
-A ) 5,8.
-A ) 6
-A ) 30 %
-A ) 42519
-C ) 30 %
-A ) 81900
-A ) 1 )
-A ) 6000... C
-A ) 4.5 %
-A ) 41.86 % C ) 45.86 % D
-C ) 405
-A ) Rs. 4000.50. C
-A ) 6..
-D ) 125
-C ) 9
-A ) 304 minutes C ) 0 minutes.
-A ) 450
-A ) 1 %
-A ) 26 days.
-A ) 47 ) 0 ) 0 0 ) 0
-A ) 850 A ) 850
-C) Can not be determined.
-A ) 11.75 miles; B ) 15.75 miles; D
-A ) 6
-A ) 10
-A ) 60 m
-A ) 10.5, 0.5, 0.5, 0.5,
-A ) 8,, B ) 14,,
-A ) 9
-A ) 12 / 25 / 25 / 25 / 25 / 26
-A ) 20 % ; C
-A ) 126.
-C ) 25 cm
-A ) None.
-A ) 13 x / 24.
-A ) 288
-A ) 5000.
-A ) 0.8
-A ) 44.6
-A ) 25 %
-A ) 32, 62.
-A ) 30 feet; C
-A ) 337.
-A ) 58
-C ) 14
-A ) 100.....
-A ) 550
-A ) 41
-A ) 61 days
-C ) 2 % Loss
-A ) 3
-A ) Rs. 1700, B
-C ) 4 hour and 31 minutes
-A ) 10, 15,
-A ) 50 ) 59
-A ) 11
-C ) 25
-A ) Rs 900,,,,
-A ) 0 0 0
-A ) 45 Min... B ) 90 Min..
-A ) 90,,,, 99,,,
-A ) 26
-A ) C )
+A ) 225;
+A ) 4,000 staplers produced that day.
+C ) 48 minutes
+A ) + 30
+C ) 9!
+D ) 0.8
+A ) 1 step / minute.
+A ) 23
+A ) ( zy – 2 ) / ( z - 2
+A ) 4
+A ) 12 ) 20 )
+A ) 16
+A ) 57.93 %
+A ) 8890 A
+A ) 2.85 miles.
+C ) $ 91.00.
+A ) 750.
+A ) ( 99,7 )
+A ) 144 km
+C ) ) 89.
+A ) 26 %
+A ) 800.
+A ) 1220.
+A ) 0 )
+A ) 19.3919
+C ) 6 km
+A ) Rs. 712.50 ;
+A ) 1616.
+C) None of these
+A ) 444.
 C
-A ) 12 am on the next day.
-A ) 20
-A ) 59
-B ) x 2 / x 2 units
-C ) 5,
-A ) 0 °,,,,
-A ) 25 %;
-A ) 23
-A ) 20 A ) 20.
-A ) 750 pi
-A ) 20  x  58.
-A ) 125 m
-C ) 57 months.
-A ) 8.75.
-A ) M + N / 8
-C ) 97 men
-A) 277
-A ) 240.5.5. C ) 120. 100.
-B ) 180, 180, 180, 180, 180, 180
-A ) ) 82
-A ) 15 kmph
-A ) 319
-A ) 69 : 91
-A ) 23
-A ) None of these.
-A ) 86 %
-A ) 6 km / h
-A ) 0 0 0
+A ) 8 hours,
+A ) 20 %
+C ) 42857 ;
+A ) 20 %
+A ) 78000 B
+A ) 1 mph.
+A ) 30000
+A ) 5%
+A ) 45.86 %
+A ) 476
+A ) Rs. 4200 / 002 / 002
+A ) 4
+A ) 90
+A ) 8
+D
+A ) 409
+A ) 1 %
+A ) 26 days
+A ) 91 ;
+A ) 800
+A ) Can be determined.
+A ) 14.75 miles C
+D ) 8
 A ) 3
-A ) Rs. 670.
-A ) 200
-C ) 2782
-A ) 1 ) 5 ) 0 B ) 1
-A ) 650 kilometers,,,, C
+C ) 60 m
+E ) 18.5,,,,, and F ) 1
+A ) 5
+A ) 9
+A ) 12 / 25
+A ) 20 % C
+A ) 88
+A ) 20 cm; B ) 28 cm
+C ) None.
+B ) 13 x + 1 ) / 24
+A ) 288.....
+A ) 5000,, and ) 5000.
+A ) 0.82
+A ) 40.8....
+A ) 20 % C ) 75 %
+A ) 42, 62, 42, 42, 42,
+A ) 30 feet.
+A ) 319
+A ) 62
+A ) 14
+A ) 100,, 100,, B
+A ) 650.
+A ) 41
+A ) 61 days.
+A ) 2 % Profit
+C ) 1
+A ) Rs. 1700.
+A ) 1 hour and 31 minutes.
+A ) 10
+A ) 45, B
+A ) 14
+D ) 14
+A ) Rs 500;;; A ) Rs 500 ;
+A ) 58
+A ) 45 Min
+A ) 90
+C ) 27
+A ) M ) 3 3 3 3 B )
+A ) 1,879
+A ) 5 am on the next day
+A ) 67 69, 69, 71,
+C ) 59
+A ) None of these
+A ) 14
+A ) 120 °
+A ) 25 %
+A ) 21.
+A ) 10
+C ) 5000 pi
+A ) 20  x  62
+A ) 50 m.
+A ) 3 months
+A ) 8.75
+A ) M + N / 8
+A ) 93 men;;; A ) 96 men;
+A ) 277.
+B ) 120 miles per hour
+A ) 70 miles.
+A ) 69.
+A ) 6 kmph
+A ) 129; B ) 129
+A ) 69 : 91. : 91.
+A ) 22
+C ) None of these numbers are known.
+A ) 86 %
+A ) 81 km / h
+C
+A )
+A ) Rs. 680.
+A ) 300
+A ) 2698
+A ) 2
+B ) 650 meters.
 A ) 45 kms / hr
 B ) 3
-B ) 320 ) 320 ) 240 ) 240 )
-C ) 14 metre
-C ) 4 hours
-A ) 0.6, B ) 0.6 B )
-A ) 8 : 2;;;?;
-A ) ) 4 ) ) ) )
-A ) 0.5498
-B ) 3 0 0 0 0 0
-A ) 50 %
-A ) 1 hr 15 min
-E ) 1 minute
-A ) 2890
-A ) 6
-A ) 36
-A ) 6.5 m
-A ) 82
-C ) 82
-A ) - 22.8
-A ) 10! / 2
-B ) $ 0,
-B ) 26
-A ) 20 / 7
-A ) 66.5 %
-A ) 14 )
-B ) 1 hour, 2 hours, 3 hours
-B ) – x  0  y  2
-A ) 25 seconds. D ) 400 seconds
-A ) 49
-A ) 103.65.. B ) 103
-A ) 11 Trousers
-A ) $ 4.73
-B ) 14
-A ) 127 km....
-A ) 8 %
-D ) 9.3
-A ) $ 050 0 0 0 0
-A ) 9 2 0 0 1 2 1 1 1
-A ) 23
-A ) Can not be determined.? C
-C
-A ) 2000 ) C ) 8000?
-A ) 5 C 3 * 4 C 3
-A )
-A ) 61, 62, 62, 63, 66,
-A ) 2000 p,
-A ) 20 min.
-A ) 45 seconds.
-A ) 226.67.
-A ) 125
-A ) 8.5 ; ; B
-A ) 750
-A ) Rs. 4.7.
-A ) 12 digits; digits digits;
-A )
-A ) After 15 minutes. A ) After 24 minutes.
-D ) 25
-A ) 20 dollars;; B ) 20 dollars;;;
-C ) ( by ) / y
-A ) 80 kmph.
-A ) 1 / 18
-A ) 10 %
-A ) 100 %
-A ) 2500;;;; B ) 2500;
-A ) 450 gms
-C ) x / ( wx )
-A ) 46 grams
-C ) 210.
-A ) 0
-B ) 900
-B
-A ) 20 hrs
-A ) 25 %
-A ) 100,, C ) 80, D ) 100
-A ) 89
-C ) 1.25 litres
-A ) 4
-D )
-A ) 13
-C ) 66 % C
-A ) $ 87 per day. per day. per day
-A ) 0
-A ) 40 ; B ) ) ) )
-A ) 20 minutes.
-A ) 20 %
-B
-A ) 2 ) 4 ) 5
-A ) 68 kg
-A ) 10
-A ) I and II only.
-C ) 8
+A ) 240
+A ) 17.5 metre.
+A ) 2 hours.
+A ) 0.6,,, C ) 0.8
+A ) 9 :......
 A ) 3
-A ) 123
-C ) 24
-A ) 0 % 0 0 0 0
-A ) s. 5790 C
-A ) 27 / AB
-A ) 57
-A ) 450
+A ) 2.9264.
+B )
+A ) 50 %,
+E ) 1 hr 15 min
+C ) 2 minutes
+A ) 278.
+A ) 6 ) 1 ) 2 ) 3 ) ) )
+A ) 26
+C ) 4.6 m
+A ) 82
+A ) 96
+C ) - 10.5
+A ) 10! / 2
+E ) $ 89.9.
+A ) 26
+A ) 10 / 7
+A ) 65.5 %
+A ) 9; B ) 9;
+A ) 1 hour,,, A ) 2 hours
+A ) x  x  y  2
+A ) 50 seconds C
+A ) 46 ;
+C ).75.
+A ) 9 Trousers
+C ) $ 5.73
+A ) 11 ;
+A ) 126 km.
+A ) 7% C
+B ) 9.2
+A ) $ 216
+A ) 9 2 0 1 1
+A ) 14
+A ) None of these
+C ) 2.2
+C ) 2000
+A ) 5 C 3 * 4 C 3
+A ) a + b ) 2 (? )
+A ) 61.
+A ) 1000 pc
+C ) 20 min
+A ) 20 seconds
+A ) 218.67.
+A ) 125.
+A ) 8)
+A ) 800
+C ) None of these
+A ) 24
+D )
+A ) After 12 minutes;;;;;;
+A ) 23
+A ) 15 dollars
+A ) ( by ) / 2 y /
+C ) 50 kmph.
+A ) 1 / 10; D / 1 / 10
+A ) 5 %
+A ) 50.
+A ) 2600
+A ) 450 gms.
+E ) y / ( w )
+C ) 48 grams
+A ) 210
+C
+D ) 900
+A ) 9 hours.
+A ) 19 hrs.... 20
+A ) 20 %
+A ) 100
+A ) 89
+A ) 0.5 ) 0.5 ) ) )
+C )
+A )
+A ) 12
+C
+A ) $ 87
+A ) 42
 A ) 50
-C ) 5 / 7 /
-A ) $ 50,000, including interest and principal A ) $ 60,000
-A ) 46 ).
-A ) 61
-A ) 5000 / y
-C ) 58
-A ) 59.8 %
+B ) 20 minutes C
+A ) 30 %..
+A ) 0 0 0
+A ) 1
+C ) 69
+A ) 11
+A ).....
+A ) 9
+A ) ) 5. ) ) 3.
+C
+A ) 20 minutes C
+A ) None of these
+A ) s. 5723.
+C ) 100 AB / 270 / AB )
+A ) 87
+A ) 240
+A ) 100
+A ) 1 / 7
+C
+A ) 45
+A ) 79, then
+A ) y / 400 y
+A ) )
+A ) 68.1 %
 A ) 69
-A ) 1,980; B ) 2,200;
-B ) 36
-A ) 1200 litres ;
-C ) 1095961
-C ) 36
-A ) ) ) ) ) )
-A ) 125; B
+A ) 1,020.
+D ) 39.
+B ) 120000 litres
+A ) 1095961 ;
+A ) 32.
+A ) 3
+A ) 125,, B ) 250,,
+Output generated from: logs/normal/last.ckpt, accuracy: 3/254 (1.1811023622047243 %), partial 64/254 (25.19685039370079 %)

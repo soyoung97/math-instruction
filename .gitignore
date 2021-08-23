@@ -1,2 +1,4 @@
+*.swp
+wandb/
 logs/
 __pycache__/

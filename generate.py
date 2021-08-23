@@ -23,7 +23,6 @@ def parse_args():
     parser.add_argument('--batch_size', type=int, default=32)
     parser.add_argument('--path', type=str, help='Model checkpoint path', default='logs/normal-prev/last.ckpt')
     parser.add_argument('--output', help='output file path', type=str, default='outputs/normal-prev-last.txt')
-    parser.add_argument('--seed', help='setting seed for decoding and generation', type=int, default=0)
     args = parser.parse_args()
     return args
 
@@ -52,7 +51,7 @@ def main():
     # load model
     T5model = load_model(args.path, args).cuda()
     res = []
-    res.append(f"Output generated from: {args.path}")
+    explain = f"Output generated from: {args.path}"
     int2ans = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E'}
     first = True
     total = 0
@@ -66,7 +65,7 @@ def main():
                 out = dm.tok.decode(gen)
                 res.append(out)
                 labels = torch.where(batch['labels'][i] == -100, 0, batch['labels'][i])
-                label_ans = dm.tok.decode(labels)
+                label_ans = dm.tok.decode(labels).replace('<pad>', '').strip()
                 ansans.append(label_ans)
                 out = out.split('<extra_id_0>')
                 if len(out) != 1: # if 1, it means zero occurances of extra_id_0 : treat it as wrong
@@ -99,7 +98,8 @@ def main():
                 raise Exception(f"Mode not implemented: {self.mode}")
             total += 1
     acc_string = f"accuracy: {correct}/{total} ({100 * correct / total} %), partial {partial}/{total} ({100 * partial / total} %)"
-    res[0] = res[0] + ", " + acc_string
+    explain += ", " + acc_string
+    res.append(explain)
     with open(args.output, 'w') as f:
         f.write('\n'.join(res).strip())
     with open('outputs/answer-explain-test.txt', 'w') as f:
