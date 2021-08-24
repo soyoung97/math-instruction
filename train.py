@@ -12,7 +12,7 @@ from dataset import AQUADataset, MathDataModule
 from transformers import T5Tokenizer, T5ForConditionalGeneration, set_seed
 from transformers.optimization import AdamW, get_cosine_schedule_with_warmup
 from model import T5ConditionalGeneration
-
+from model import Base
 parser = argparse.ArgumentParser(description='Math instruction')
 
 parser.add_argument('--checkpoint_path',
@@ -63,14 +63,15 @@ if __name__ == '__main__':
     args = parser.parse_args()
     args.default_root_dir = args.log_dir
     args.max_epochs = 50
-    args.gpus = -1
+    args.gpus = 1 # -1
     args.num_workers = 4
     args.accelerator='dp'
     set_seed(args.seed)
     logging.info(args)
 
     model = T5ConditionalGeneration(args)
-
+    #model.config.max_length = 512
+    #model.config.early_stopping = True
     dm = MathDataModule(args.train_file,
                         args.test_file,
                         args.val_file,
@@ -80,7 +81,7 @@ if __name__ == '__main__':
                         max_len=args.max_len,
                         num_workers=args.num_workers)
 
-    checkpoint_callback = pl.callbacks.ModelCheckpoint(monitor='val_loss',
+    checkpoint_callback = pl.callbacks.ModelCheckpoint(monitor='val_acc',
                                                        dirpath=args.default_root_dir,
                                                        filename='model_chp/{epoch:02d}-{val_loss:.3f}',
                                                        verbose=True,

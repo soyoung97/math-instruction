@@ -1,3 +1,4 @@
+cache/
 *.swp
 wandb/
 logs/

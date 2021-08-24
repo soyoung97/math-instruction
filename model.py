@@ -9,7 +9,7 @@ from pytorch_lightning import loggers as pl_loggers
 from pytorch_lightning.loggers import WandbLogger
 from torch.utils.data import DataLoader, Dataset
 from dataset import AQUADataset, MathDataModule
-from transformers import T5Tokenizer, T5ForConditionalGeneration, set_seed
+from transformers import T5Tokenizer, T5ForConditionalGeneration
 from transformers.optimization import AdamW, get_cosine_schedule_with_warmup
 
 
@@ -31,7 +31,7 @@ class Base(pl.LightningModule):
 
         parser.add_argument('--lr',
                             type=float,
-                            default=1e-5,
+                            default=2e-5,
                             help='The initial learning rate')
 
         parser.add_argument('--warmup_ratio',
@@ -102,27 +102,37 @@ class T5ConditionalGeneration(Base):
         self.log('train_loss', loss, prog_bar=True)
         return loss
 
+    def format_explain_output(self, raw):
+        out = raw.split('<extra_id_0>')
+        if len(out) == 1:
+            return 'wrong format'
+        out = out[-1].replace("</s>", '').replace("<pad>", '').strip().upper()
+        return out
+
     def validation_step(self, batch, batch_idx):
         outs = self(batch)
         results = []
         loss = outs['loss']
-        generated_outputs = self.model.generate(batch['input_ids'])
+        # add another loss for answer
+        generated_outputs = self.model.generate(batch['input_ids'], max_length=128, repetition_penalty=2.0)
         correct = 0
         partial_correct = 0
+        penalty = 2.0
+        import pdb; pdb.set_trace()
         for i, gen in enumerate(generated_outputs):
             if self.mode == 'explain':
                 out = self.tokenizer.decode(gen)
-                out = out.split('<extra_id_0>')
-                if len(out) != 1: # if 1, it means zero occurances of extra_id_0 : treat it as wrong
-                    out = out[-1].replace('</s>', '').replace('<pad>', '').strip().upper()
-                    answer = self.int2ans[batch['answer'][i].item()]
-                    if len(out) != 0:
-                        if answer == out:
-                            correct += 1
-                        if answer == out[0]:
-                            partial_correct += 1
-                    if self.init_val:
-                        print(f"EXPLAIN: answer: {answer}, output: {out}, same: {answer == out}")
+                out = self.format_explain_output(out)
+                while penalty < 5 and out == 'wrong format':
+                    penalty += 0.5
+                    gen = self.model.generate(batch['input_ids'][i].unsqueeze(0), max_length=128, repetition_penalty=penalty)
+                    out = self.tokenizer.decode(gen[0])
+                    out = self.format_explain_output(out)
+                answer = self.int2ans[batch['answer'][i].item()]
+                if answer == out:
+                    correct += 1
+                if self.init_val:
+                    print(f"EXPLAIN: answer: {answer}, output: {out}, same: {answer == out}")
             elif self.mode == 'normal':
                 out = self.tokenizer.decode(gen, skip_special_tokens=True).upper().strip()
                 answer = self.int2ans[batch['answer'][i].item()]

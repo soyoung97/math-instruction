@@ -1,0 +1,255 @@
+A )
+A ) $ 61.40
+A ) 14
+A ) 0.27
+A ) 270
+A ) 100
+A ) 64524
+A ) 10 hours
+A ) 82
+A ) 25
+A ) 226
+A ) 4,500
+A ) 24 minutes
+A ) 0
+A ) 4
+B ) 0.8
+A ) None of the above
+A ) 22
+A ) ( zy – 2x
+A ) 4.5
+A ) 12
+A ) 14
+A ) 14.37
+A ) 8890
+A ) 2.85 miles
+A ) $ 57.00
+A ) 700
+A ) ( 1,0
+A ) 126 km
+A )
+A ) 20 percent
+A ) 800
+A ) 1584
+A ) None
+A ) 13.3542
+A ) 3 km
+A ) Rs. 697.50;;;;.50;50;
+A ) None
+A ) $ 20000
+A ) 488
+A ) 9,8
+A ) 8
+A ) 30
+A ) 42857
+A ) 20
+A ) 81900
+A ) 1.25
+A ) 30000
+A ) 5%
+A ) 42.86
+A ) 409
+A ) Rs. 4700.50.50...50. B
+A ) 6
+A ) 45
+A ) 9
+A ) 240 minutes
+A ) 438
+A ) 1 %
+A ) 26 days
+A ) 69
+A ) 850
+A ) Can not be determined.
+A ) 12.75 miles
+A ) 6
+A ) 6
+A ) 60 sqm
+A ) 10.5
+A ) 10
+A )
+A ) 12/ 25
+A ) 20
+A ) 129
+A ) 20 cm
+A ) None
+A ) 13 + 1 )/ 24
+A ) 220
+A ) 5000
+A ) 0.8
+A ) 40.8
+A ) 50
+A ) 62
+A ) 30 feet
+A ) 350
+A ) 57
+A ) 18
+A ) None
+A ) none of these
+A ) 37
+A ) 51 days
+A ) 2
+A ) 4
+A ) Rs. 1840
+A ) 1 hour and 31 minutes
+A ) 15
+A ) 45
+A ) 14
+A ) 11
+A ) Rs 400
+A ) 14
+A ) 45 Min
+A ) 90
+A ) 19
+A ) M - 3 4 5 6 6 7
+A ) 1,876
+A ) 12 am on the next day
+A ) 59
+A ) 28
+A ) None of these
+A ) 12
+A ) 80
+A ) 25 percent
+A ) 26
+A ) 20
+A ) 750 pi
+A ) None of these
+A ) 50 km
+A ) 6 months
+A ) 8.75
+A ) M + N/ 8
+A ) 93 men
+A ) 277
+A ) 240
+A ) 180 miles miles miles C
+A ) 84
+A ) 15
+A ) 388
+A ) 69
+A ) 19
+A ) None of these.
+A ) 50
+A ) 8 km/h
+A ) 0.
+A )
+A ) Rs. 670
+A ) 200
+A ) 2688
+A ) 1
+A ) 555 meters
+A ) 45 kms/hr
+A ) 3
+A ) 80 % C
+A ) 12 metres
+A ) 4 hours
+A ) 0.96
+A ) 9
+A )
+A ) 2.5498
+A ) 3
+A ) 50 percent
+A ) 1 hour 20 min
+A ) 1 minute
+A ) 288
+A ) 6
+A ) 36
+A ) 3.8
+A ) 82
+A ) 96
+A ) Can not be determined
+A ) 10
+A ) $ 8.5
+A ) 26
+A ) 10 kg
+A ) 62.5
+A ) 9
+A ) 1 hour
+A ) x > y.
+A ) 50 seconds
+A ) 46
+A ) 0.
+A ) 9 Trousers
+A ) $ 6.73
+A ) 14
+A ) 127 km
+A ) 10.5 %
+A ) 9.0
+A ) $ 216
+A ) 9 2 1 3
+A ) 19
+A ) Can not be determined..
+A ) 1.6
+A ) 2000
+A ) 5 C 4 * 3 C
+A ) (?
+A ) 56
+A ) 1000 pc, and each pallet holds 1250 phones C
+A ) 20 min
+A ) 43 seconds
+A ) 218.67
+A ) 125
+A ) 6.5
+A ) 500,,,,,, 800
+A ) Rs. 4.7
+A ) 36
+A ) None
+A ) After 12 minutes
+A ) 21
+A ) 20 dollars
+A ) ( by + by ), / 2 y
+A ) 80 km/hr
+A ) 128/90
+A ) 10 percent
+A ) 50 % C
+A ) 2500
+A ) 450 grams
+A ) y / ( 1200 wx
+A ) 36 grams
+A ) 190
+A ) 9
+A ) 900
+A ) 11 hours
+A ) 20 hours
+A ) 20 %
+A ) 100
+A ) 88
+A ) 0.5
+A ) 1
+A ) 2 1/2
+A )
+A ) 69
+A ) $ 87
+A ) 21
+A ) 40
+A ) 20 minutes
+A ) 20
+A ) None
+A ) 1
+A ) 69
+A ) 11
+A ) I and II only
+A ) 12
+A )
+A ) 113
+A ) 20 minutes C
+A ) 1 %
+A )
+A ) 27 / AB
+A ) 57
+A ) 120
+A ) 50,,, B
+A ) 1 1/2 / 7
+A ) $ 55,000
+A ) 45
+A ) 82
+A ) y / 400
+A ) 48
+A ) 26.2
+A ) 69
+A ) 1,020
+A ) 37
+A ) 120000 litres
+A ) 1095961
+A ) 33
+A ) 3
+A ) 250
+Output generated from: logs/normal/model_chp/epoch=10-val_loss=0.000.ckpt, accuracy: 0/254 (0.0 %), partial 62/254 (24.409448818897637 %) wrong format: 0 (0.0%), inner wrong format: 0 (0.0%)

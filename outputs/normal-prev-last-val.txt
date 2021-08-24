@@ -1,0 +1,255 @@
+A ) 10000
+A ) 100 km
+A ) 16
+B
+A ) 14
+A ) $ 920
+A ) $ 208
+A ) 5
+A ) 450
+A ) 25 litres
+A ) 14
+A ) 127
+A )
+A ) 12.9 hours
+A ) 12 million
+A ) $ 68.00
+A ) 32
+A ) 2,600
+A ) 50.5
+A ) 5 %
+A ) 180
+A ) $ 200
+A ) 450 candy bars
+A ) once every 10 years
+A ) 25
+A ) 1 hour
+B
+A ) 313
+A ) 20
+A ) Rs 16001
+A ) Rs
+A ) 12,096 pounds of water
+A ) 1
+A ) I only;;;.
+A ) 20
+A ) 1 1/2
+A ) 1.1 million
+A ) on the 20th day
+A )
+A ) 14
+A ) 25
+A ) 4
+A ) 11 days
+A ) 10
+A ) 16
+A ) 250 / t
+B ) 20
+A ) 1500
+A ) None
+A ) 1
+A ) 1200 miles
+A ) 120
+A ) 33
+A ) 94,000 $
+A ). 0 %
+A ) None
+A ) 12,500
+A ) 13
+A ) 212
+A ) 6
+A ) 1/ 26
+A ) 40 km
+A ) 50
+A ) 1
+A ) 1000
+A ) 95
+A ) 10
+A ) 18 years
+A ) 10.5
+B ) 11: 51
+A )
+A ) Roger
+A )
+A ) None of these
+A ) y = 2 x 5
+A ) 125 liters
+B
+A ) 1998
+B ) 6
+A ) 2,000
+A ) 63
+A ) 14
+A ) 1
+A ) 20
+B )
+A ) 30
+A )
+A ) 6 K
+A ) 45
+A ) 100
+A ) 12
+A ) 268
+A ) Rs 7925
+B ) 6
+A ) 34
+A ) 6.5
+A )
+A ) 3
+A ) 20 * pi
+A ) 1360
+A ) None
+A ) 1575.04
+A )
+A ) Data inadequate
+A ) Rs. 30
+A ) $ 32.4
+A ) 50
+A ) 20
+A ) None
+A ) 188
+A ) 40 cm
+A ) xp / ( 3.6 p ),
+A ) Rs 10,000
+A ) 15 min
+A ) $ 158
+A ) $ 4200
+A ) 4
+A ) 10 f
+A ) 12 heures
+A ) 20
+A ) 60 km/h.
+A ) 40
+A ) 125 km
+A ) Thumb
+A )
+A ) 22
+A ) 23
+A ) 190
+A ) 25300
+A ) None
+A ) Rs. 188
+A ) 3
+A ) 14
+A ) None
+A ) 208 cm
+A ) 15.
+A ) 20
+A ) 89
+A ) 4
+A ) 200
+A ) 4
+A ) 240
+A ) 480
+A ) 2
+A ) 40
+B ) 250
+A ) 1 quart
+A ) 0.8
+B ) 120
+A ) 5000
+A ) $ 2.42
+A ) 25 km an hour slower speed
+A ) 2.7
+A ) 51
+A ) 15 hours
+A ) $ 82
+A ) 65 percent
+A ) 51
+A ) 10.25
+B
+A ) 3
+A ) 300
+A ) 50
+B )
+A ) 200
+A ) None of these
+A ) 1268.333
+A ) 216
+A )
+A ) 0.00475
+A ) 315
+A ) 40
+A ) 1 %
+A ) 1
+A ) 12
+A ) 6
+A ) 4
+A ) 6 pounds
+A ) 25 kg
+A ) 1.6 cubic meters
+A ) gains Rs 50
+A ) $ 18
+B ) 4
+A ) Rs 125,
+A ) 8
+A ) 25.0
+A ) 78741
+A ) 12.5
+A ) 2.9
+A ) 45 minutes and 12 seconds
+A ) - 10 percent
+A )
+A ) 4.7
+A ) When B covers 930
+A ) 158
+A ) 99
+A ) 1.20 dollars
+A ) 42
+A ) None
+A ) None of these
+A ) $ 198.65
+A ) 10.5
+A ) 46
+A ) 225
+A ) 3.75 km
+A ) 240
+A ) 51 percent
+A ) None
+B ) none of the above
+A ) 3
+B ) 145
+A )
+A ) 19.456 seconds.
+A ) 8.319
+A ) 17 min
+A ) None of these
+A ) 15.1
+A ) 12000,12 000
+A ) 35.07
+B ) 89
+A ) 15/ 4 hours
+B ) 91
+A ) 62
+A ) 119
+A ) $ 10,000
+A ) none of these
+A ) None of them
+A ) 9
+A ) I only
+A ) 14
+A ) 25
+A ) 1
+A ) 1.75 hour
+A ) 40.75
+A ) 210
+A ) 9
+A ) $ 3
+A ) 2100
+A ) 10/ 23
+B ) 8
+A ) 8
+A ) 125
+A ) 26
+A ) 27
+A ) 129
+A ) 80
+A ) 3 hours
+A ) 10
+A ) 1.8 hours
+B
+A ) $ 57.98
+A ) 34
+A ) 676000
+A ) $ 20
+Output generated from: logs/normal-prev/last.ckpt, accuracy: 1/254 (0.3937007874015748 %), partial 68/254 (26.771653543307085 %) wrong format: 0 (0.0%), inner wrong format: 0 (0.0%)

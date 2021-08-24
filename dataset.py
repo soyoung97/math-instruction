@@ -57,6 +57,7 @@ class AQUADataset(Dataset):
     def get_overfull_count(self):
         overfull_cnt = 0
         tgt_cnt = 0
+        tgt_length = 0
         print(f"Starting get_overfull_count for {self.filename}...")
         for instance in tqdm(self.docs):
             input_ids = self.tok.encode(instance['input'])
@@ -65,8 +66,11 @@ class AQUADataset(Dataset):
                 overfull_cnt += 1
             if len(target_ids) >= self.max_len:
                 tgt_cnt += 1
+            tgt_length += len(target_ids)
+
+        average_tgt_length = tgt_length/len(self.docs)
         print(f"counting done for {self.filename}")
-        return overfull_cnt, tgt_cnt, len(self.docs)
+        return overfull_cnt, tgt_cnt, len(self.docs), average_tgt_length
 
     def add_padding_data(self, inputs):
         if len(inputs) < self.max_len:
