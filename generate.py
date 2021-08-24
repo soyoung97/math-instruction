@@ -40,13 +40,16 @@ def main():
             batch_size=args.batch_size, max_len=512, num_workers=4)
     dm.setup(None)
     set_seed(args.seed)
-    #train_cnt, train_tot = dm.train.get_overfull_count()
-    #val_cnt, val_tot = dm.val.get_overfull_count()
-    #test_cnt, test_tot = dm.test.get_overfull_count()
+    train_cnt, train_tgt, train_tot = dm.train.get_overfull_count()
+    val_cnt, val_tgt, val_tot = dm.val.get_overfull_count()
+    test_cnt, test_tgt, test_tot = dm.test.get_overfull_count()
 
-    #print(f"Train: {100* train_cnt/train_tot}% overfull ({train_cnt} / {train_tot})")
-    #print(f"Test: {100 * test_cnt/test_tot}% overfull ({test_cnt} / {test_tot})")
-    #print(f"Val: {100* val_cnt/val_tot}% overfull ({val_cnt} / {val_tot})")
+    print(f"Train input: {100* train_cnt/train_tot}% overfull ({train_cnt} / {train_tot})")
+    print(f"Train target: {100* train_tgt/train_tot}% overfull ({train_tgt} / {train_tot})")
+    print(f"Test input: {100 * test_cnt/test_tot}% overfull ({test_cnt} / {test_tot})")
+    print(f"Test target: {100 * test_tgt/test_tot}% overfull ({test_tgt} / {test_tot})")
+    print(f"Val input: {100* val_cnt/val_tot}% overfull ({val_cnt} / {val_tot})")
+    print(f"Val target: {100* val_tgt/val_tot}% overfull ({val_tgt} / {val_tot})")
 
     # load model
     T5model = load_model(args.path, args).cuda()
@@ -57,7 +60,7 @@ def main():
     total = 0
     correct = 0
     partial = 0
-    ansans = []
+    #ansans = []
     for batch in tqdm(dm.test_dataloader()):
         generated_outputs = T5model.model.generate(batch['input_ids'].cuda())
         for i, gen in enumerate(generated_outputs):
@@ -66,7 +69,7 @@ def main():
                 res.append(out)
                 labels = torch.where(batch['labels'][i] == -100, 0, batch['labels'][i])
                 label_ans = dm.tok.decode(labels).replace('<pad>', '').strip()
-                ansans.append(label_ans)
+                #ansans.append(label_ans)
                 out = out.split('<extra_id_0>')
                 if len(out) != 1: # if 1, it means zero occurances of extra_id_0 : treat it as wrong
                     out = out[-1].replace('</s>', '').replace('<pad>', '').strip().upper()
@@ -102,8 +105,8 @@ def main():
     res.append(explain)
     with open(args.output, 'w') as f:
         f.write('\n'.join(res).strip())
-    with open('outputs/answer-explain-test.txt', 'w') as f:
-        f.write('\n'.join(ansans).strip())
+    #with open('outputs/answer-explain-test.txt', 'w') as f:
+    #    f.write('\n'.join(ansans).strip())
     print(f"Writing to {args.output} done!")
     print(acc_string)
 if __name__ == '__main__':
