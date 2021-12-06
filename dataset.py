@@ -96,14 +96,13 @@ class AQUADataset(Dataset):
         input_ids = self.add_padding_data(input_ids)
 
         label_ids = self.tok.encode(instance['target'])
-        label_ids.append(self.tok.eos_token_id)
-        dec_input_ids = [self.pad_index]
-        dec_input_ids += label_ids[:-1]
-        dec_input_ids = self.add_padding_data(dec_input_ids)
+        #label_ids.append(self.tok.eos_token_id)
+        #dec_input_ids = [self.pad_index]
+        #dec_input_ids += label_ids[:-1]
+        #dec_input_ids = self.add_padding_data(dec_input_ids)
         label_ids = self.add_ignored_data(label_ids)
-
         return {'input_ids': np.array(input_ids, dtype=np.int_),
-                'decoder_input_ids': np.array(dec_input_ids, dtype=np.int_),
+         #       'decoder_input_ids': np.array(dec_input_ids, dtype=np.int_),
                 'labels': np.array(label_ids, dtype=np.int_),
                 'answer': np.array(self.answer2int[instance['correct']], dtype=np.int_)}
 

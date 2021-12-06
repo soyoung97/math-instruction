@@ -10,7 +10,7 @@ from pytorch_lightning.loggers import WandbLogger
 from torch.utils.data import DataLoader, Dataset
 from dataset import AQUADataset, MathDataModule
 from transformers import T5Tokenizer, T5ForConditionalGeneration
-from transformers.optimization import AdamW, get_cosine_schedule_with_warmup
+from transformers.optimization import AdamW, get_linear_schedule_with_warmup
 
 
 class Base(pl.LightningModule):
@@ -31,7 +31,7 @@ class Base(pl.LightningModule):
 
         parser.add_argument('--lr',
                             type=float,
-                            default=2e-5,
+                            default=3e-5,
                             help='The initial learning rate')
 
         parser.add_argument('--warmup_ratio',
@@ -56,11 +56,11 @@ class Base(pl.LightningModule):
         num_workers = self.hparams.num_workers
         data_len = len(self.train_dataloader().dataset)
         logging.info(f'number of workers {num_workers}, data length {data_len}')
-        num_train_steps = int(data_len / (self.hparams.batch_size * num_workers) * self.hparams.max_epochs)
+        num_train_steps = int(data_len * self.hparams.max_epochs / self.hparams.batch_size)
         logging.info(f'num_train_steps : {num_train_steps}')
         num_warmup_steps = int(num_train_steps * self.hparams.warmup_ratio)
         logging.info(f'num_warmup_steps : {num_warmup_steps}')
-        scheduler = get_cosine_schedule_with_warmup(
+        scheduler = get_linear_schedule_with_warmup(
             optimizer,
             num_warmup_steps=num_warmup_steps, num_training_steps=num_train_steps)
         lr_scheduler = {'scheduler': scheduler, 
@@ -88,11 +88,11 @@ class T5ConditionalGeneration(Base):
     def forward(self, inputs):
 
         attention_mask = inputs['input_ids'].ne(self.pad_token_id).float()
-        decoder_attention_mask = inputs['decoder_input_ids'].ne(self.pad_token_id).float()
+     #   decoder_attention_mask = inputs['decoder_input_ids'].ne(self.pad_token_id).float()
         return self.model(input_ids=inputs['input_ids'],
                           attention_mask=attention_mask,
-                          decoder_input_ids=inputs['decoder_input_ids'],
-                          decoder_attention_mask=decoder_attention_mask,
+      #                    decoder_input_ids=inputs['decoder_input_ids'],
+      #                    decoder_attention_mask=decoder_attention_mask,
                           labels=inputs['labels'], return_dict=True)
 
 
@@ -115,10 +115,8 @@ class T5ConditionalGeneration(Base):
         loss = outs['loss']
         # add another loss for answer
         generated_outputs = self.model.generate(batch['input_ids'], max_length=128, repetition_penalty=2.0)
-        correct = 0
-        partial_correct = 0
         penalty = 2.0
-        import pdb; pdb.set_trace()
+        correct = 0
         for i, gen in enumerate(generated_outputs):
             if self.mode == 'explain':
                 out = self.tokenizer.decode(gen)
@@ -128,6 +126,7 @@ class T5ConditionalGeneration(Base):
                     gen = self.model.generate(batch['input_ids'][i].unsqueeze(0), max_length=128, repetition_penalty=penalty)
                     out = self.tokenizer.decode(gen[0])
                     out = self.format_explain_output(out)
+                penalty = 2.0 # reset penalty
                 answer = self.int2ans[batch['answer'][i].item()]
                 if answer == out:
                     correct += 1
@@ -139,28 +138,24 @@ class T5ConditionalGeneration(Base):
                 if len(out) != 0:
                     if answer == out:
                         correct += 1
-                    if answer == out[0]:
-                        partial_correct += 1
                 if self.init_val:
                     print(f"NORMAL: answer: {answer}, output: {out}, same: {answer == out}")
             else:
                 raise Exception(f"Mode not implemented: {self.mode}")
         self.init_val = False
-        val_acc, val_first_match_acc = correct/len(generated_outputs), partial_correct/len(generated_outputs)
-        self.log("val_acc", val_acc, sync_dist=True)
-        self.log("val_first_match_acc", val_first_match_acc, sync_dist=True)
-        return (loss, val_acc, val_first_match_acc)
+        val_acc = correct/len(generated_outputs)
+        #self.log("val_acc", val_acc, sync_dist=True)
+        return (loss, val_acc)
 
     def validation_epoch_end(self, outputs):
-        losses, accs, fm_accs = [], [], []
+        losses, accs = [], []
         total_correct = 0
-        for loss, acc, fm_acc in outputs:
+        for loss, acc  in outputs:
             accs.append(acc)
-            fm_accs.append(fm_acc)
             losses.append(loss)
-        print(f"\n Validation Epoch END\nTotal: {len(outputs)}\nlosses:{losses}\naccs: {accs}\nfm_accs: {fm_accs}")
-        self.log('epoch_acc', torch.stack(accs).mean(), sync_dist=True)
-        self.log('epoch_first_match_acc', torch.stack(fm_accs).mean(), sync_dist=True)
+        print(f"\n Validation Epoch END\nTotal: {len(outputs)}\nlosses:{losses}\naccs: {accs}\n")
+        self.log('epoch_acc', torch.stack(accs).mean(), sync_dist=True, prog_bar=True)
+        #self.log('epoch_first_match_acc', torch.stack(fm_accs).mean(), sync_dist=True)
         self.log('val_loss', torch.stack(losses).mean(), prog_bar=True, sync_dist=True)
         self.init_val = True
 

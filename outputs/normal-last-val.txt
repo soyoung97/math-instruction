@@ -1,255 +1,255 @@
-A ) 3000
-A ) 200m
-A ) 18
-A ) ( 2,0
-A ) 14
-A ) $ 920
-A ) $ 208
-A ) 6
-A ) 450
-A ) 25 litres
-A ) 14
-A ) 68
-A )
-A ) 10.5 hours
-A ) 12 million
-A ) $ 68.00
-A ) 33
-A ) 2,600
-A ) 50.5
-A ) 5 %
-A ) 180
-A ) $ 200
-A ) 450 candy bars
-A ) once every 10 years
-A ) 25
-A ) 1 hour
-A ) 2 only
-A ) 319
-A ) 20
-A ) Rs. 16003
-A ) Rs. 4.5
-A ) 12,096 pounds of water
-A ) 1
-A ) I only; B
-A ) 20
-A ) 1 1/2
-A ) 1.2 million
-A ) on the 20th day
-A )
-A ) 14
-A ) 25
-A ) 4 * 5
-A ) 11 days
-A ) 10
-A ) 16: 15
-A ) 250 t / 25
-A ) 10
-A ) 1500
-A ) None
-A ) 3
-A ) 2000 miles
-A ) 125
-A ) 32
-A ) 94,000 $
-A ). 0 %
-A ) Rs. 400;;;;
-A ) 14,500
-A ) 14
-A ) 212
-A ) 12
-A ) 1/ 26
-A ) 40 km
-A ) 50
-A ) 1
-A ) 1000
-A ) 95
-A ) 10
-A ) 18 years old
-A ) 10.5
-A ) 11: 51
-A ) 13
-A ) Roger
-A )
-A ) none of these
-A ) y = 2x- 4
-A ) 125 liters
-A )?
-A ) 1984
-A ) 2
-A ) 2,000,,,,,, are available
-A ) 63
-A ) 14
-A ) 14
-A ) 20 %
-A ) 1
-A ) 30
-A )
-A ) K
-A ) 45
-A ) 100
-A ) 12
-A ) 269
-A ) Rs 7925
-A )
-A ) 34
-A ) 6.5
-A )
-A ) 3
-A ) 20 * pi
-A ) 1360
-A ) None
-A ) 1675.04
-A )
-A ) Data inadequate..
-A ) Rs. 30
-A ) $ 32.4
-A ) 50
-A ) 20
-A ) Rs. 0
-A ) 188
-A ) 40 cm
-A ) xp / ( 3.6 p ),
-A ) Rs 10,000
-A ) 14 min
-A ) $ 158
-A ) $ 4200
-A ) 4
-A ) 10 f francs
-A ) 12 hours
-A ) 20
-A ) 60 km/h.
-A ) 40
-A ) 125 km km km km km km are possible are possible km are possible B
-A ) Thumb
-A )
-A ) 22
-A ) 23
-A ) 190
-A ) 25300
-A ) None
-A ) Rs. 188
-A ) 2
-A ) 14
-A ) None
-A ) 208 cm 3 cm
-A ) 14.
-A ) 20
-A ) 89
-A ) 6
-A ) 100
-A ) 4
-A ) 240
-A ) 850
-A ) 2
-A ) 50
-A ) 200
-A ) 2 1/2 quarts
-A ) 0.8 pounds
-A ) 120
-A ) 5000
-A ) $ 2.42
-A ) 25 km an hour slower speed
-A ) 2.7 C
-A ) 59
-A ) 14 hours
-A ) $ 82
-A ) 70 percent
-A ) 46
-A ) 10.25
-A ) 1 hour
-A ) 3
-A ) 400
-A ) 50
-A )
-A ) 200
-A ) None of these elements. element element element element element; by the following formula B
-A ) 1268.333
-A ) 208
-A ) 9 hour.
-A ) 0.00475
-A ) 319
-A ) 40
-A ) 1 %
-A )
-A ) 12
-A ) 12
-A ) 4
-A ) 6 pounds
-A ) 57 kg
-A ) 1.6 cubic meters of concrete
-A ) loses Rs. 30
-A ) $ 18
-A ) 1
-A ) Rs 125, Sohan has Rs 125.
-A ) 8
-A ) 25.0
-A ) 78741
-A ) 12.5 %
-A ) 2.9
-A ) 45 minutes and 12 seconds
-A ) - 10 percent
-A )
-A ) 4.7
-A ) When B covers 930m
-A ) 158 kg
-A ) 99
-A ) 1.19 x dollars
-A ) 42
-A ) None
-A ) None of these
-A ) $ 208.10
-A ) 10.5
-A ) 46
-A ) 225
-A ) 2.75 km
-A ) 240
-A ) 50
-A ) None
-A ) none of the above
-A ) 3
-A ) 120
-A ) 9
-A ) 19.456 seconds.
-A ) 8.312
-A ) 17 min
-A ) None of these
-A ) 20.0
-A ) 12000,12 000
-A ) 35.07
-A ) 82
-A ) 15/ 4 hours
-A ) 90
-A ) 69 m
-A ) 119
-A ) $ 10,000
-A ) 29.12
-A ) None of them
-A ) 9
-A ) I only;;;;;;. IV lose $ 100 III
-A ) 14
-A ) 25
-A ) 2
-A ) 1.75 hour
-A ) 40.75%
-A ) 501
-A ) 9
-A ) $ 3
-A ) 2100
-A ) 11/ 23
-A ) 6
-A ) 8
-A ) 125
-A ) 25
-A ) 27
-A ) 125
-A ) 80
-A ) 5 hours
-A ) 14
-A ) 1.8 hours
-A ) 6
-A ) $ 69.98
-A ) 34
-A ) 676000
-A ) $ 20
-Output generated from: logs/normal/last.ckpt, accuracy: 0/254 (0.0 %), partial 69/254 (27.165354330708663 %) wrong format: 0 (0.0%), inner wrong format: 0 (0.0%)
+A
+C
+A
+E
+D
+A
+C
+D
+B
+A
+D
+C
+A
+B
+A
+A
+D
+C
+B
+C
+A
+E
+D
+C
+E
+B
+D
+C
+A
+C
+B
+A
+D
+C
+B
+A
+D
+B
+C
+D
+B
+A
+C
+B
+B
+E
+B
+A
+B
+C
+B
+B
+E
+E
+A
+A
+D
+D
+D
+A
+A
+D
+D
+D
+B
+D
+D
+D
+E
+A
+A
+B
+B
+B
+A
+A
+A
+C
+C
+A
+A
+D
+D
+B
+C
+A
+B
+E
+B
+D
+D
+D
+D
+D
+D
+C
+D
+A
+A
+D
+C
+B
+D
+B
+A
+C
+E
+D
+B
+C
+B
+B
+B
+A
+C
+B
+E
+A
+C
+C
+A
+A
+B
+D
+C
+B
+A
+D
+B
+C
+B
+E
+A
+C
+C
+A
+A
+B
+B
+C
+D
+E
+B
+E
+C
+C
+B
+B
+A
+D
+A
+A
+B
+D
+A
+C
+B
+B
+C
+A
+C
+A
+C
+D
+C
+C
+A
+A
+C
+B
+A
+C
+A
+A
+C
+C
+B
+B
+B
+C
+B
+A
+C
+C
+D
+B
+A
+C
+E
+D
+D
+D
+C
+E
+C
+B
+C
+C
+C
+D
+E
+E
+B
+C
+B
+C
+A
+C
+A
+D
+C
+A
+B
+B
+A
+A
+C
+C
+A
+C
+B
+C
+A
+B
+C
+B
+D
+C
+D
+B
+D
+E
+E
+A
+B
+A
+E
+B
+B
+B
+E
+A
+C
+D
+C
+A
+E
+B
+E
+D
+E
+B
+A
+C
+Output generated from: logs/normal/model_chp/epoch=15-epoch=epoch_acc=0.297.ckpt, accuracy: 75/254 (29.52755905511811 %), partial 75/254 (29.52755905511811 %) wrong format: 0 (0.0%), inner wrong format: 0 (0.0%)

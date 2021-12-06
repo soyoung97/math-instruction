@@ -62,8 +62,8 @@ if __name__ == '__main__':
     parser = pl.Trainer.add_argparse_args(parser)
     args = parser.parse_args()
     args.default_root_dir = args.log_dir
-    args.max_epochs = 50
-    args.gpus = 1 # -1
+    args.max_epochs = 100
+    args.gpus =  -1
     args.num_workers = 4
     args.accelerator='dp'
     set_seed(args.seed)
@@ -81,13 +81,13 @@ if __name__ == '__main__':
                         max_len=args.max_len,
                         num_workers=args.num_workers)
 
-    checkpoint_callback = pl.callbacks.ModelCheckpoint(monitor='val_acc',
+    checkpoint_callback = pl.callbacks.ModelCheckpoint(monitor='epoch_acc',
                                                        dirpath=args.default_root_dir,
-                                                       filename='model_chp/{epoch:02d}-{val_loss:.3f}',
+                                                       filename='model_chp/{epoch:02d}-{epoch_acc:.3f}',
                                                        verbose=True,
                                                        save_last=True,
-                                                       mode='min',
-                                                       save_top_k=1)
+                                                       mode='max',
+                                                       save_top_k=2)
     #tb_logger = pl_loggers.TensorBoardLogger(os.path.join(args.default_root_dir, 'tb_logs'))
     lr_logger = pl.callbacks.LearningRateMonitor()
     wandb_logger = WandbLogger()
